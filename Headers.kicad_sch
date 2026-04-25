@@ -1,0 +1,13 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "509bfddb-fb1d-4118-961d-d30f7f9e402c")
+	(paper "A4")
+	(title_block
+		(title "Power Testing Board")
+		(rev "1")
+		(company "CSULB SHARKSAT TEAM")
+	)
+	(lib_symbols)
+)

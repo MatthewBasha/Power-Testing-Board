@@ -224,7 +224,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -632,13 +632,21 @@
         "uuid": "8dfe3f75-d63d-44af-a5fd-924c068dba42"
       }
     ],
-    "used_designators": "#PWR18-31",
+    "used_designators": "#PWR6-9,#PWR32,U5-9",
     "variants": []
   },
   "sheets": [
     [
       "8dfe3f75-d63d-44af-a5fd-924c068dba42",
       "Root"
+    ],
+    [
+      "9a9c766d-024c-40eb-99fe-749a95dbf803",
+      "Untitled Sheet"
+    ],
+    [
+      "dcb13158-aadc-4756-9948-474188602fc6",
+      "Headers"
     ]
   ],
   "text_variables": {},

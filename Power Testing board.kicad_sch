@@ -4,6 +4,11 @@
 	(generator_version "10.0")
 	(uuid "8dfe3f75-d63d-44af-a5fd-924c068dba42")
 	(paper "A4")
+	(title_block
+		(title "Power Testing Board")
+		(rev "1")
+		(company "CSULB SHARKSAT TEAM")
+	)
 	(lib_symbols
 		(symbol "Connector:Conn_01x26_Pin"
 			(pin_names
@@ -1812,563 +1817,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Power_Management:TPS26631RGE"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -8.89 16.51 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TPS26631RGE"
-				(at 7.62 16.51 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias"
-				(at 0 -31.75 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps2663.pdf"
-				(at -10.16 20.32 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "60V, 6A Power Limiting, Surge Protection Industrial eFuse, Adjustable Overvoltage cut-off, Active Current Limiting with Pulse current support, VQFN-24"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "efuse protection switch"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Texas*RGE0024H*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TPS26631RGE_0_1"
-				(rectangle
-					(start -10.16 15.24)
-					(end 10.16 -17.78)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "TPS26631RGE_1_1"
-				(pin power_in line
-					(at -12.7 12.7 0)
-					(length 2.54)
-					(name "IN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -12.7 12.7 0)
-					(length 2.54)
-					(hide yes)
-					(name "IN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -12.7 7.62 0)
-					(length 2.54)
-					(name "B_GATE"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -12.7 2.54 0)
-					(length 2.54)
-					(name "DRV"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 17.78 270)
-					(length 2.54)
-					(name "IN_SYS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -12.7 -2.54 0)
-					(length 2.54)
-					(name "UVLO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -12.7 -7.62 0)
-					(length 2.54)
-					(name "OVP"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -20.32 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 -15.24 180)
-					(length 2.54)
-					(name "dVdT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 -12.7 180)
-					(length 2.54)
-					(name "ILIM"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -12.7 -15.24 0)
-					(length 2.54)
-					(name "MODE"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -12.7 -12.7 0)
-					(length 2.54)
-					(name "~{SHDN}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 -5.08 180)
-					(length 2.54)
-					(name "IMON"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin open_collector line
-					(at 12.7 0 180)
-					(length 2.54)
-					(name "~{FLT}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 12.7 7.62 180)
-					(length 2.54)
-					(name "PGTH"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 12.7 -2.54 180)
-					(length 2.54)
-					(name "PGOOD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 12.7 12.7 180)
-					(length 2.54)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 12.7 180)
-					(length 2.54)
-					(hide yes)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -10.16 10.16 0)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -10.16 5.08 0)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at -10.16 0 0)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 10.16 10.16 180)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 10.16 5.08 180)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 10.16 2.54 180)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -20.32 90)
-					(length 2.54)
-					(hide yes)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "25"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Sensor:INA260"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3161,16 +2609,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 166.37) (xy 107.95 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3246853f-ad03-4b69-9692-47d1d45e0d35")
-	)
-	(wire
-		(pts
 			(xy 52.07 69.85) (xy 54.61 69.85)
 		)
 		(stroke
@@ -3198,16 +2636,6 @@
 			(type default)
 		)
 		(uuid "525cf430-2756-4697-894f-b6f5578a5f82")
-	)
-	(wire
-		(pts
-			(xy 137.16 166.37) (xy 137.16 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "58b71925-20bc-427e-9fd0-e5b88ad38093")
 	)
 	(wire
 		(pts
@@ -3321,16 +2749,6 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 166.37) (xy 78.74 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a8b051d8-4513-4ec5-a632-68e2fc918bf5")
-	)
-	(wire
-		(pts
 			(xy 52.07 72.39) (xy 54.61 72.39)
 		)
 		(stroke
@@ -3388,16 +2806,6 @@
 			(type default)
 		)
 		(uuid "b44964d4-16c9-4ffd-806c-4768ac7f59c5")
-	)
-	(wire
-		(pts
-			(xy 49.53 166.37) (xy 49.53 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8242636-e34e-4608-bfd3-c6ab87b443fa")
 	)
 	(wire
 		(pts
@@ -3638,157 +3046,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Power_Management:TPS26631RGE")
-		(at 137.16 146.05 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "032f7a29-d077-43e0-8b0d-5b5de1bf4c10")
-		(property "Reference" "U8"
-			(at 139.3033 125.73 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TPS26631RGE"
-			(at 139.3033 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias"
-			(at 137.16 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps2663.pdf"
-			(at 127 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "60V, 6A Power Limiting, Surge Protection Industrial eFuse, Adjustable Overvoltage cut-off, Active Current Limiting with Pulse current support, VQFN-24"
-			(at 137.16 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "14"
-			(uuid "6d083c30-2832-4e57-a322-4bf1fe259466")
-		)
-		(pin "18"
-			(uuid "c2cea5f9-8b7b-4d04-a80c-74f8ebdba142")
-		)
-		(pin "4"
-			(uuid "2d83373b-1eae-4e42-a835-57ea39f366b9")
-		)
-		(pin "10"
-			(uuid "1463311a-e41f-4806-bdb1-897c5c1aa9f8")
-		)
-		(pin "2"
-			(uuid "f00b1c24-ee8a-4bd4-933b-7201a813ec78")
-		)
-		(pin "3"
-			(uuid "2c9b653d-bf8d-4c74-b560-198317ed8f1c")
-		)
-		(pin "19"
-			(uuid "fa9686c8-0ae1-461d-a537-a42cbb6052a1")
-		)
-		(pin "8"
-			(uuid "d216d1c0-6923-45cc-b74f-1de670b4f105")
-		)
-		(pin "7"
-			(uuid "6855d43c-7ca7-494b-adae-4c9463320be2")
-		)
-		(pin "21"
-			(uuid "42e46828-178b-438a-ade7-965cf010012b")
-		)
-		(pin "17"
-			(uuid "05039fe9-d208-415a-9803-f45ccfa1e450")
-		)
-		(pin "16"
-			(uuid "14e88d5e-778a-4644-8050-5aaa5f3a40b4")
-		)
-		(pin "5"
-			(uuid "feeaf161-185a-4e75-91e4-e895fcfaca38")
-		)
-		(pin "15"
-			(uuid "63d73854-580d-4d92-b856-3ffcd17a5295")
-		)
-		(pin "6"
-			(uuid "6f92e234-f7a6-45cc-a5c0-0c804ba23467")
-		)
-		(pin "11"
-			(uuid "315a2312-c32e-45e7-ba32-5eed37380b08")
-		)
-		(pin "12"
-			(uuid "ff66ef97-c01f-41a3-b96c-e980e48eb8ac")
-		)
-		(pin "1"
-			(uuid "5f57e587-3f27-405d-938b-32696b2383d2")
-		)
-		(pin "13"
-			(uuid "d13d67c6-613c-4ae0-ab31-7914b68d827b")
-		)
-		(pin "22"
-			(uuid "2a958dce-af4d-453a-8cdb-5125b288dcf6")
-		)
-		(pin "20"
-			(uuid "9c05c336-f739-4d68-940d-83c2433daac7")
-		)
-		(pin "9"
-			(uuid "a9ac5598-d8e7-487e-bc15-c2180f57bb2c")
-		)
-		(pin "23"
-			(uuid "e2f9cb1d-6535-4316-88fb-f473e607a23c")
-		)
-		(pin "25"
-			(uuid "1f4da764-9d64-4d44-82ce-06a56f2edf3d")
-		)
-		(pin "24"
-			(uuid "d14a71e2-682a-4e08-8f7c-1ab9107f2934")
-		)
-		(instances
-			(project "Power Testing board"
-				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
-					(reference "U8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 200.66 62.23 0)
 		(unit 1)
@@ -4022,235 +3279,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Power_Management:TPS26631RGE")
-		(at 49.53 146.05 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "120b080a-2d85-4f27-a1b1-242357736425")
-		(property "Reference" "U5"
-			(at 51.6733 125.73 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TPS26631RGE"
-			(at 51.6733 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias"
-			(at 49.53 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps2663.pdf"
-			(at 39.37 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "60V, 6A Power Limiting, Surge Protection Industrial eFuse, Adjustable Overvoltage cut-off, Active Current Limiting with Pulse current support, VQFN-24"
-			(at 49.53 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "14"
-			(uuid "78133091-1bdb-4ec3-b54e-1e350b567969")
-		)
-		(pin "18"
-			(uuid "b6531418-405d-4c01-877b-8c0858d6e836")
-		)
-		(pin "4"
-			(uuid "32664464-a038-4255-98ff-67b1c032889c")
-		)
-		(pin "10"
-			(uuid "ce5d7340-2357-411f-9d31-686c6f656057")
-		)
-		(pin "2"
-			(uuid "470765d7-8f77-47b3-ac5c-0d46454a1b92")
-		)
-		(pin "3"
-			(uuid "693ec411-c15c-4ed0-8010-7668abcbac8c")
-		)
-		(pin "19"
-			(uuid "80aecd2c-8f94-48d2-bf4a-73a665f12cb1")
-		)
-		(pin "8"
-			(uuid "18b368cb-af74-4cbb-9bec-baa7e3cf88f6")
-		)
-		(pin "7"
-			(uuid "7818b4d8-4964-4721-a9fc-cae91deeaf50")
-		)
-		(pin "21"
-			(uuid "118564eb-225b-42f9-bbb5-f481fbbee770")
-		)
-		(pin "17"
-			(uuid "895392c9-a16d-4960-bc81-e63726a0c694")
-		)
-		(pin "16"
-			(uuid "a0462eae-3720-4e7f-b861-a53f8a2ceb48")
-		)
-		(pin "5"
-			(uuid "af21db0d-ad50-488a-a03b-ac0183fb1ca4")
-		)
-		(pin "15"
-			(uuid "80d66a76-4efc-4eec-88cb-c17eb4e20c83")
-		)
-		(pin "6"
-			(uuid "ec13108c-3319-458a-be73-3cb25c8093e7")
-		)
-		(pin "11"
-			(uuid "1fb316f1-aaf4-483f-9eb2-f9862bb6dece")
-		)
-		(pin "12"
-			(uuid "771bae6e-b40b-4b94-a6bb-120443095739")
-		)
-		(pin "1"
-			(uuid "d0b9dd71-7c83-4e9a-89a3-f2726708c416")
-		)
-		(pin "13"
-			(uuid "7c06efd5-8dfd-4fbe-bb24-ce443ee22682")
-		)
-		(pin "22"
-			(uuid "44c6851b-5b7e-4da0-9ecf-57215ffc3281")
-		)
-		(pin "20"
-			(uuid "1ad4e869-5320-4539-829b-6a202e53a2a6")
-		)
-		(pin "9"
-			(uuid "131dace5-c7c3-436f-92c7-3ef54dad2b44")
-		)
-		(pin "23"
-			(uuid "220a62b2-9219-4a29-9e6b-4d1dfda8ca3c")
-		)
-		(pin "25"
-			(uuid "437e1f44-3e98-42b8-8606-34056849e058")
-		)
-		(pin "24"
-			(uuid "d6eb2011-a861-41b8-9254-a4d180302be0")
-		)
-		(instances
-			(project "Power Testing board"
-				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
-					(reference "U5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 78.74 171.45 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "18dc32c8-5299-487b-949c-71b0d28b9629")
-		(property "Reference" "#PWR07"
-			(at 78.74 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 78.74 176.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 78.74 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 78.74 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4a7d1376-f987-4a23-b8e4-25aa36de114e")
-		)
-		(instances
-			(project "Power Testing board"
-				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Sensor:INA260")
 		(at 97.79 49.53 0)
 		(unit 1)
@@ -4447,84 +3475,6 @@
 			(project "Power Testing board"
 				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
 					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 137.16 171.45 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "19f9733a-d021-4ab2-b69e-fa663a6ab68d")
-		(property "Reference" "#PWR09"
-			(at 137.16 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 137.16 176.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 137.16 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 137.16 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 137.16 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cdbd0dda-1819-4d85-aef0-128961a9de8c")
-		)
-		(instances
-			(project "Power Testing board"
-				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
-					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -5214,157 +4164,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Power_Management:TPS26631RGE")
-		(at 107.95 146.05 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5c449a39-03ab-4c0e-bd5e-92692d4cc2b3")
-		(property "Reference" "U7"
-			(at 110.0933 125.73 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TPS26631RGE"
-			(at 110.0933 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias"
-			(at 107.95 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps2663.pdf"
-			(at 97.79 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "60V, 6A Power Limiting, Surge Protection Industrial eFuse, Adjustable Overvoltage cut-off, Active Current Limiting with Pulse current support, VQFN-24"
-			(at 107.95 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "14"
-			(uuid "a4b488a6-613b-42d2-a74b-341181972492")
-		)
-		(pin "18"
-			(uuid "5747268b-0a30-48b7-a518-fc9657f34570")
-		)
-		(pin "4"
-			(uuid "d8ddc8f5-82ab-4174-83b5-91a34f8603fb")
-		)
-		(pin "10"
-			(uuid "b2eb7c65-5fda-4460-b128-0552ca66995c")
-		)
-		(pin "2"
-			(uuid "f6315805-7e00-44d8-a296-c1afd8e3ff56")
-		)
-		(pin "3"
-			(uuid "7b1653db-4a17-4483-813d-62841d22409f")
-		)
-		(pin "19"
-			(uuid "9edae97b-5e51-4586-a6b6-3a4238f64206")
-		)
-		(pin "8"
-			(uuid "28cc24b3-4e7e-4c66-98b4-df67f718eaea")
-		)
-		(pin "7"
-			(uuid "376db0e6-26d2-4cc9-90e1-5615d8a43387")
-		)
-		(pin "21"
-			(uuid "75156d90-2e48-43df-badc-1c9e408e1e34")
-		)
-		(pin "17"
-			(uuid "25a03f15-1b54-41b1-b0c5-edd8a17fd4e8")
-		)
-		(pin "16"
-			(uuid "b828d489-150b-448f-bb06-e9dba55f9037")
-		)
-		(pin "5"
-			(uuid "593b95a5-9dfe-4f2f-83ca-86e3a98e83e3")
-		)
-		(pin "15"
-			(uuid "0c683673-141a-476e-94e9-384520aa2be9")
-		)
-		(pin "6"
-			(uuid "8475fb1f-0c08-4e0e-b077-7325b662ccad")
-		)
-		(pin "11"
-			(uuid "d0e0a988-77c6-4981-a251-854a06e8d4f1")
-		)
-		(pin "12"
-			(uuid "259fd86b-47a5-4a26-b1e6-01d5b74c25bb")
-		)
-		(pin "1"
-			(uuid "bf53fc51-5dda-456f-a0ce-dd540e0380c3")
-		)
-		(pin "13"
-			(uuid "b9ea5eb0-cffa-4411-990a-2d6d3d9ad061")
-		)
-		(pin "22"
-			(uuid "584ede93-5cf5-4c5e-9a2b-542312f40193")
-		)
-		(pin "20"
-			(uuid "2895cddc-931f-4355-8d44-2d2782b308b6")
-		)
-		(pin "9"
-			(uuid "30138354-48a4-4464-8e27-39953bec7c54")
-		)
-		(pin "23"
-			(uuid "2c9fd834-d126-46ad-92ae-83ae116e2ed2")
-		)
-		(pin "25"
-			(uuid "123338cc-44b9-47f9-bb61-8cc5cbb0c971")
-		)
-		(pin "24"
-			(uuid "d40bfc73-dbf9-46ef-967b-ad6d48a6a82a")
-		)
-		(instances
-			(project "Power Testing board"
-				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
-					(reference "U7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 54.61 72.39 270)
 		(unit 1)
@@ -5923,84 +4722,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 107.95 171.45 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "836426c2-363d-486f-a257-d997c2a9350f")
-		(property "Reference" "#PWR08"
-			(at 107.95 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 107.95 176.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 107.95 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 107.95 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 107.95 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "15359fc5-31a6-4f41-9178-f2e89636b615")
-		)
-		(instances
-			(project "Power Testing board"
-				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 187.96 54.61 90)
 		(unit 1)
@@ -6301,235 +5022,6 @@
 			(project "Power Testing board"
 				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
 					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Power_Management:TPS26631RGE")
-		(at 78.74 146.05 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a02809b2-8f36-4149-a85f-e96380502a53")
-		(property "Reference" "U6"
-			(at 80.8833 125.73 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TPS26631RGE"
-			(at 80.8833 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias"
-			(at 78.74 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps2663.pdf"
-			(at 68.58 125.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "60V, 6A Power Limiting, Surge Protection Industrial eFuse, Adjustable Overvoltage cut-off, Active Current Limiting with Pulse current support, VQFN-24"
-			(at 78.74 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "14"
-			(uuid "06ca1dda-377b-46ca-9f7f-765fc00915e2")
-		)
-		(pin "18"
-			(uuid "e0b019d7-7532-4559-b41f-8dadd6e82444")
-		)
-		(pin "4"
-			(uuid "39e83900-2e87-4a15-832a-6201b07376f6")
-		)
-		(pin "10"
-			(uuid "402234e1-2f02-47eb-8b61-dfb8e6932874")
-		)
-		(pin "2"
-			(uuid "87cf4608-95ba-4430-9b69-3459c46905e3")
-		)
-		(pin "3"
-			(uuid "1519a1c0-6b67-479b-881e-7baf924fbddf")
-		)
-		(pin "19"
-			(uuid "19409fbd-a8bf-4c29-b056-5209edef416d")
-		)
-		(pin "8"
-			(uuid "37b8a9bf-1e88-4280-b6f7-daeaa049134c")
-		)
-		(pin "7"
-			(uuid "50dc98ac-4847-4673-a3dd-e63cbd7fed9f")
-		)
-		(pin "21"
-			(uuid "9b37a1c4-6884-4a01-b28c-a454fe670815")
-		)
-		(pin "17"
-			(uuid "86e576d9-0bc2-4f0e-8704-96ea60b8df80")
-		)
-		(pin "16"
-			(uuid "933db489-8b9c-411f-ac9d-b88c9c2b2ce1")
-		)
-		(pin "5"
-			(uuid "15b6c735-ad52-4d2e-860c-517b07c044da")
-		)
-		(pin "15"
-			(uuid "a65f507b-2f41-4b67-aa78-7afd1be294c3")
-		)
-		(pin "6"
-			(uuid "b853c31e-3b21-4c8e-ac59-6c14c798380c")
-		)
-		(pin "11"
-			(uuid "6ed19277-4a5f-4aca-b952-7573c8a967f1")
-		)
-		(pin "12"
-			(uuid "619034e6-d083-444a-a2ca-dae7b39fd806")
-		)
-		(pin "1"
-			(uuid "6eb99015-c1d0-446a-b36f-c28ae813cd1b")
-		)
-		(pin "13"
-			(uuid "f943f0ca-9b63-45dc-99cf-787d80b64f75")
-		)
-		(pin "22"
-			(uuid "cc6f4acd-1f01-401d-a5d7-702bfd09b2ea")
-		)
-		(pin "20"
-			(uuid "50b13fc8-ddd3-4899-9175-d14e3b18ee86")
-		)
-		(pin "9"
-			(uuid "ca99acfa-a641-4347-ab98-cd2991d16bf1")
-		)
-		(pin "23"
-			(uuid "01f91301-cc2d-400a-8e43-3fe0ddfe8470")
-		)
-		(pin "25"
-			(uuid "5c3ca9e2-663d-40dd-bccc-91269b706607")
-		)
-		(pin "24"
-			(uuid "ac034254-82c2-4e92-8e74-b8fb8b60cd02")
-		)
-		(instances
-			(project "Power Testing board"
-				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
-					(reference "U6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 49.53 170.18 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a0a66075-fd16-4c9b-8de2-3dc95d1cd640")
-		(property "Reference" "#PWR06"
-			(at 49.53 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 49.53 175.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.53 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 49.53 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 49.53 170.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f6af1917-2631-4608-a07f-5769dd515640")
-		)
-		(instances
-			(project "Power Testing board"
-				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
-					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -7856,6 +6348,98 @@
 				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
 					(reference "#PWR022")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 306.07 0)
+		(size 429.26 212.09)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "9a9c766d-024c-40eb-99fe-749a95dbf803")
+		(property "Sheetname" "Untitled Sheet"
+			(at 306.07 -0.7116 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "untitled.kicad_sch"
+			(at 306.07 212.6746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Power Testing board"
+				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 890.27 2.54)
+		(size 392.43 213.36)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "dcb13158-aadc-4756-9948-474188602fc6")
+		(property "Sheetname" "Headers"
+			(at 890.27 1.8284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Headers.kicad_sch"
+			(at 890.27 216.4846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Power Testing board"
+				(path "/8dfe3f75-d63d-44af-a5fd-924c068dba42"
+					(page "3")
 				)
 			)
 		)
