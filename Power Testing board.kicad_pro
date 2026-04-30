@@ -632,8 +632,12 @@
         "uuid": "8dfe3f75-d63d-44af-a5fd-924c068dba42"
       }
     ],
-    "used_designators": "#PWR6-9,#PWR32,U5-9,J1-4",
-    "variants": []
+    "used_designators": "",
+    "variants": [
+      {
+        "name": "buck/boost"
+      }
+    ]
   },
   "sheets": [
     [

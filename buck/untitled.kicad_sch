@@ -1,0 +1,105 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "16baede6-669e-4370-a191-58de0f6525a6")
+	(paper "A4")
+	(lib_symbols)
+	(text ""
+		(exclude_from_sim no)
+		(at 70.612 41.402 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "9a22348b-3fcc-427d-9f9e-044aca65b076")
+	)
+	(text "Buck/Boost"
+		(exclude_from_sim no)
+		(at 80.01 35.052 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "9f2158b1-51f8-4e64-b005-37550a1bb8c7")
+	)
+	(hierarchical_label "EN"
+		(shape input)
+		(at 77.47 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0ae12ff0-8e8c-4eca-87e8-988b8dc996f8")
+	)
+	(hierarchical_label "VIN-"
+		(shape passive)
+		(at 77.47 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "116eb9d4-7444-4381-ba53-f881166640f4")
+	)
+	(hierarchical_label "CV_cpr"
+		(shape input)
+		(at 77.47 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3a504d0d-a55c-4a48-8329-00c6c6fb0f27")
+	)
+	(hierarchical_label "VIN+"
+		(shape input)
+		(at 77.47 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "60a3519b-aa2c-4eb1-91c3-bc337b18effa")
+	)
+	(hierarchical_label "VOUT-"
+		(shape passive)
+		(at 77.47 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6112641c-11f4-494d-99d2-a673717bbd61")
+	)
+	(hierarchical_label "CV_cpr 2"
+		(shape input)
+		(at 77.47 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7247da05-116d-40b0-a64f-242b77325e0d")
+	)
+	(hierarchical_label "VOUT"
+		(shape output)
+		(at 77.47 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8d94bc75-a77c-4019-a341-3529368bc575")
+	)
+)
