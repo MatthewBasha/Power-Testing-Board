@@ -1,0 +1,13 @@
+# KiCad local/cache files
+*.kicad_prl
+*.lck
+*-backups/
+.history/
+*/.history/
+fp-info-cache
+*.net
+*erc*.rpt
+*drc*.rpt
+gerbers/
+fabrication/
+__pycache__/

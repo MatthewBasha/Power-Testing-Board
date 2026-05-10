@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Power_Testing_Board")(type "KiCad")(uri "${KIPRJMOD}/Power_Testing_Board.kicad_sym")(options "")(descr "Project-local symbols for compact CubeSat power testing board"))
+)
