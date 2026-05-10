@@ -295,28 +295,31 @@ def make_components() -> None:
                 "6": efout, "3": f"PG_{name}", "4": flt,
             })
             add_res(f"R{rnum}", "1.10k 1% ILM ~6A", f"ILIM_{name}", "GND", x - 14, y + 19, "Resistor_SMD:R_0805_2012Metric"); rnum += 1
-            add_res(f"R{rnum}", "100k EN top", raw, reset, x - 20, y - 14); rnum += 1
-            add_res(f"R{rnum}", "100k EN bottom", reset, "GND", x - 7, y - 14); rnum += 1
-            add_res(f"R{rnum}", "24.9k OVLO top", raw, f"OVLO_{name}", x + 9, y - 14); rnum += 1
-            add_res(f"R{rnum}", "10k OVLO bottom", f"OVLO_{name}", "GND", x + 22, y - 14); rnum += 1
+            add_res(f"R{rnum}", "100k 1% EN top 2.40V", raw, reset, x - 20, y - 14); rnum += 1
+            add_res(f"R{rnum}", "100k 1% EN bottom", reset, "GND", x - 7, y - 14); rnum += 1
+            add_res(f"R{rnum}", "24.9k 1% OVLO top 4.19V", raw, f"OVLO_{name}", x + 9, y - 14); rnum += 1
+            add_res(f"R{rnum}", "10k 1% OVLO bottom", f"OVLO_{name}", "GND", x + 22, y - 14); rnum += 1
         else:
             add(uref, sym, f"TPS26631RGE {name} eFuse", "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias", x, y, {
                 "1": raw, "2": raw, "5": raw, "6": f"UVLO_{name}", "7": f"OVP_{name}", "8": "GND", "10": f"ILIM_{name}", "12": reset, "25": "GND",
                 "17": efout, "18": efout, "14": flt, "16": f"PG_{name}", "13": f"IMON_{name}",
             })
             add_res(f"R{rnum}", "3.00k 1% ILIM ~6A", f"ILIM_{name}", "GND", x - 14, y + 22, "Resistor_SMD:R_0805_2012Metric"); rnum += 1
+            # TPS26631 UVLO/OVP dividers use the 1.20 V typical rising threshold.
+            # Threshold = 1.20 V * (Rtop + Rbottom) / Rbottom.
             vals = {
-                "5V": ("249k UVLO top", "100k UVLO bottom", "402k OVP top", "100k OVP bottom"),
-                "12V": ("649k UVLO top", "100k UVLO bottom", "1.15M OVP top", "100k OVP bottom"),
-                "16V8": ("976k UVLO top", "100k UVLO bottom", "1.50M OVP top", "100k OVP bottom"),
+                "5V": ("261k 1% UVLO top 4.33V", "100k 1% UVLO bottom", "383k 1% OVP top 5.80V", "100k 1% OVP bottom"),
+                "12V": ("806k 1% UVLO top 10.87V", "100k 1% UVLO bottom", "1.05M 1% OVP top 13.80V", "100k 1% OVP bottom"),
+                "16V8": ("1.07M 1% UVLO top 14.04V", "100k 1% UVLO bottom", "1.40M 1% OVP top 18.00V", "100k 1% OVP bottom"),
             }[name]
             add_res(f"R{rnum}", vals[0], raw, f"UVLO_{name}", x - 23, y - 23); rnum += 1
             add_res(f"R{rnum}", vals[1], f"UVLO_{name}", "GND", x - 7, y - 23); rnum += 1
             add_res(f"R{rnum}", vals[2], raw, f"OVP_{name}", x + 9, y - 23); rnum += 1
             add_res(f"R{rnum}", vals[3], f"OVP_{name}", "GND", x + 25, y - 23); rnum += 1
 
-        add_cap(f"C{cnum}", "1uF input close to eFuse", raw, "GND", x - 22, y + 14); cnum += 1
-        add_cap(f"C{cnum}", "10uF output close to eFuse", efout, "GND", x + 22, y + 14); cnum += 1
+        vin_rating = "25V" if name in {"3V3", "5V"} else "50V"
+        add_cap(f"C{cnum}", f"1uF {vin_rating} X7R input close to eFuse", raw, "GND", x - 22, y + 14); cnum += 1
+        add_cap(f"C{cnum}", f"10uF {vin_rating} X7R output close to eFuse", efout, "GND", x + 22, y + 14); cnum += 1
 
         add(f"U{5 + idx}", "Adafruit_INA260_4226_Module", f"INA260 {name} module", "Power_Testing_Board:Adafruit_INA260_4226_Module", x + 58, y, {
             "7": efout, "8": prot, "1": "+ARDUINO_5V", "2": "GND", "3": "I2C_SCL", "4": "I2C_SDA", "5": f"ALERT_{name}",
@@ -396,14 +399,14 @@ def write_footprints() -> None:
             "\t)\n"
         )
 
-    def box(x1: float, y1: float, x2: float, y2: float) -> str:
-        return line(x1, y1, x2, y1) + line(x2, y1, x2, y2) + line(x2, y2, x1, y2) + line(x1, y2, x1, y1)
+    def box(x1: float, y1: float, x2: float, y2: float, layer: str = "F.SilkS") -> str:
+        return line(x1, y1, x2, y1, layer=layer) + line(x2, y1, x2, y2, layer=layer) + line(x2, y2, x1, y2, layer=layer) + line(x1, y2, x1, y1, layer=layer)
 
-    def user_text(text: str, x: float, y: float, size: float = 0.8, rot: float = 0) -> str:
+    def user_text(text: str, x: float, y: float, size: float = 0.8, rot: float = 0, layer: str = "F.SilkS") -> str:
         return (
             f'\t(fp_text user "{sx(text)}"\n'
             f"\t\t(at {fmt(x)} {fmt(y)} {fmt(rot)})\n"
-            '\t\t(layer "F.SilkS")\n'
+            f'\t\t(layer "{layer}")\n'
             f'\t\t(uuid "{u()}")\n'
             f"\t\t(effects (font (size {fmt(size)} {fmt(size)}) (thickness 0.1)))\n"
             "\t)\n"
@@ -440,9 +443,13 @@ def write_footprints() -> None:
     # Adafruit INA260 Product 4226 carrier footprint from Adafruit Eagle board geometry:
     # board 22.86 x 22.86 mm, 2.5 mm mounting holes, 8-pin header, 5.08 mm current terminal.
     ina_body = box(-11.43, -11.43, 11.43, 11.43)
-    ina_body += user_text("VCC GND SCL SDA ALERT VBUS IN+ IN-", 0, -9.6, 0.7)
-    for idx, x in enumerate([-8.89, -6.35, -3.81, -1.27, 1.27, 3.81, 6.35, 8.89], start=1):
+    ina_body += user_text("VCC GND SCL SDA ALERT VBUS IN+ IN-", 0, -9.6, 0.7, layer="F.Fab")
+    # Header positions 7/8 exist mechanically on the breakout but are not used as carrier-board
+    # high-current nodes. VIN+ and VIN- are routed to the 5.08 mm terminal pads below.
+    for idx, x in enumerate([-8.89, -6.35, -3.81, -1.27, 1.27, 3.81], start=1):
         ina_body += pad(idx, "thru_hole", "rect" if idx == 1 else "circle", x, -8.89, 1.78, 1.78, 1.0)
+    ina_body += pad("H7", "thru_hole", "circle", 6.35, -8.89, 1.78, 1.78, 1.0)
+    ina_body += pad("H8", "thru_hole", "circle", 8.89, -8.89, 1.78, 1.78, 1.0)
     ina_body += pad(7, "thru_hole", "oval", -2.54, 7.62, 2.2, 3.0, 1.1, 90)
     ina_body += pad(8, "thru_hole", "oval", 2.54, 7.62, 2.2, 3.0, 1.1, 90)
     ina_body += pad("", "np_thru_hole", "circle", -8.89, 8.89, 3.2, 3.2, 2.5)
@@ -460,10 +467,10 @@ def write_footprints() -> None:
     )
 
     # Boost converter footprint from user-provided screenshots and later physical verification: 60 mm x 42 mm x 20 mm.
-    boost_body = box(-30, -21, 30, 21)
-    boost_body += user_text("VERIFIED 60x42 MODULE, M3 HOLES, TERMINALS", 0, 0, 0.9)
-    boost_body += user_text("IN- IN+", -27, -5, 0.8, 90)
-    boost_body += user_text("OUT- OUT+", 27, -5, 0.8, 90)
+    boost_body = box(-30, -21, 30, 21, layer="F.SilkS")
+    boost_body += user_text("VERIFIED 60x42 MODULE, M3 HOLES, TERMINALS", 0, 0, 0.9, layer="F.Fab")
+    boost_body += user_text("IN- IN+", -27, -5, 0.8, 90, layer="F.Fab")
+    boost_body += user_text("OUT- OUT+", 27, -5, 0.8, 90, layer="F.Fab")
     boost_body += pad(1, "thru_hole", "circle", -27, 5, 3.6, 3.6, 1.8)
     boost_body += pad(2, "thru_hole", "circle", -27, -5, 3.6, 3.6, 1.8)
     boost_body += pad(3, "thru_hole", "circle", 27, 5, 3.6, 3.6, 1.8)
@@ -511,7 +518,6 @@ def write_tables_and_gitignore() -> None:
         "*erc*.rpt",
         "*drc*.rpt",
         "gerbers/",
-        "fabrication/",
         "__pycache__/",
     ]
     merged = existing
@@ -568,7 +574,7 @@ def write_schematic() -> None:
 
     notes = [
         (10, 10, "Power path on every rail: RAW -> eFuse -> INA260 VIN+ -> INA260 VIN- -> PROTECTED output. INA260 VIN- is the downstream positive rail, never GND."),
-        (10, 15, "Compact layout choice: eFuse ICs are on the main PCB for minimum size. If field replacement becomes more important than area, move each eFuse circuit to a plug-in daughterboard."),
+        (10, 15, "Serviceable layout choice: eFuse ICs are on the main PCB for manufacturer assembly. If field replacement becomes more important than board area, move each eFuse circuit to a plug-in daughterboard."),
         (10, 20, "Boost module footprint uses physically verified 60 mm x 42 mm x 20 mm module geometry."),
         (10, 25, "Only user-selected H1/H2 mission power and GND pins are connected. Excluded/communication pins are not represented in this schematic."),
     ]
@@ -599,6 +605,198 @@ def update_project() -> None:
     data["schematic"]["drawing"] = data["schematic"].get("drawing", {})
     data["schematic"]["drawing"]["default_line_thickness"] = data["schematic"]["drawing"].get("default_line_thickness", 6)
     data["sheets"] = [[str(uuid.uuid4()), "Root"]]
+    data.setdefault("net_settings", {})
+    data["net_settings"]["meta"] = {"version": 5}
+    data["net_settings"]["classes"] = [
+        {
+            "bus_width": 12,
+            "clearance": 0.2,
+            "diff_pair_gap": 0.25,
+            "diff_pair_via_gap": 0.25,
+            "diff_pair_width": 0.2,
+            "line_style": 0,
+            "microvia_diameter": 0.3,
+            "microvia_drill": 0.1,
+            "name": "Default",
+            "pcb_color": "rgba(0, 0, 0, 0.000)",
+            "priority": 2147483647,
+            "schematic_color": "rgba(0, 0, 0, 0.000)",
+            "track_width": 0.25,
+            "tuning_profile": "",
+            "via_diameter": 0.6,
+            "via_drill": 0.3,
+            "wire_width": 6,
+        },
+        {
+            "bus_width": 12,
+            "clearance": 0.35,
+            "diff_pair_gap": 0.25,
+            "diff_pair_via_gap": 0.25,
+            "diff_pair_width": 0.2,
+            "line_style": 0,
+            "microvia_diameter": 0.3,
+            "microvia_drill": 0.1,
+            "name": "HIGH_CURRENT_3V3",
+            "pcb_color": "rgba(255, 128, 0, 0.800)",
+            "priority": 100,
+            "schematic_color": "rgba(255, 128, 0, 0.800)",
+            "track_width": 3.0,
+            "tuning_profile": "",
+            "via_diameter": 1.6,
+            "via_drill": 0.8,
+            "wire_width": 6,
+        },
+        {
+            "bus_width": 12,
+            "clearance": 0.35,
+            "diff_pair_gap": 0.25,
+            "diff_pair_via_gap": 0.25,
+            "diff_pair_width": 0.2,
+            "line_style": 0,
+            "microvia_diameter": 0.3,
+            "microvia_drill": 0.1,
+            "name": "HIGH_CURRENT_5V",
+            "pcb_color": "rgba(255, 64, 64, 0.800)",
+            "priority": 100,
+            "schematic_color": "rgba(255, 64, 64, 0.800)",
+            "track_width": 3.0,
+            "tuning_profile": "",
+            "via_diameter": 1.6,
+            "via_drill": 0.8,
+            "wire_width": 6,
+        },
+        {
+            "bus_width": 12,
+            "clearance": 0.4,
+            "diff_pair_gap": 0.25,
+            "diff_pair_via_gap": 0.25,
+            "diff_pair_width": 0.2,
+            "line_style": 0,
+            "microvia_diameter": 0.3,
+            "microvia_drill": 0.1,
+            "name": "HIGH_CURRENT_12V",
+            "pcb_color": "rgba(255, 220, 0, 0.800)",
+            "priority": 100,
+            "schematic_color": "rgba(255, 220, 0, 0.800)",
+            "track_width": 3.5,
+            "tuning_profile": "",
+            "via_diameter": 1.8,
+            "via_drill": 0.9,
+            "wire_width": 6,
+        },
+        {
+            "bus_width": 12,
+            "clearance": 0.45,
+            "diff_pair_gap": 0.25,
+            "diff_pair_via_gap": 0.25,
+            "diff_pair_width": 0.2,
+            "line_style": 0,
+            "microvia_diameter": 0.3,
+            "microvia_drill": 0.1,
+            "name": "HIGH_CURRENT_16V8",
+            "pcb_color": "rgba(180, 80, 255, 0.800)",
+            "priority": 100,
+            "schematic_color": "rgba(180, 80, 255, 0.800)",
+            "track_width": 3.5,
+            "tuning_profile": "",
+            "via_diameter": 1.8,
+            "via_drill": 0.9,
+            "wire_width": 6,
+        },
+        {
+            "bus_width": 12,
+            "clearance": 0.3,
+            "diff_pair_gap": 0.25,
+            "diff_pair_via_gap": 0.25,
+            "diff_pair_width": 0.2,
+            "line_style": 0,
+            "microvia_diameter": 0.3,
+            "microvia_drill": 0.1,
+            "name": "GND_POWER",
+            "pcb_color": "rgba(0, 180, 80, 0.800)",
+            "priority": 100,
+            "schematic_color": "rgba(0, 180, 80, 0.800)",
+            "track_width": 2.0,
+            "tuning_profile": "",
+            "via_diameter": 1.2,
+            "via_drill": 0.6,
+            "wire_width": 6,
+        },
+        {
+            "bus_width": 12,
+            "clearance": 0.2,
+            "diff_pair_gap": 0.25,
+            "diff_pair_via_gap": 0.25,
+            "diff_pair_width": 0.2,
+            "line_style": 0,
+            "microvia_diameter": 0.3,
+            "microvia_drill": 0.1,
+            "name": "SIGNAL",
+            "pcb_color": "rgba(128, 128, 128, 0.800)",
+            "priority": 100,
+            "schematic_color": "rgba(128, 128, 128, 0.800)",
+            "track_width": 0.25,
+            "tuning_profile": "",
+            "via_diameter": 0.6,
+            "via_drill": 0.3,
+            "wire_width": 6,
+        },
+        {
+            "bus_width": 12,
+            "clearance": 0.2,
+            "diff_pair_gap": 0.25,
+            "diff_pair_via_gap": 0.25,
+            "diff_pair_width": 0.2,
+            "line_style": 0,
+            "microvia_diameter": 0.3,
+            "microvia_drill": 0.1,
+            "name": "I2C",
+            "pcb_color": "rgba(0, 128, 255, 0.800)",
+            "priority": 100,
+            "schematic_color": "rgba(0, 128, 255, 0.800)",
+            "track_width": 0.25,
+            "tuning_profile": "",
+            "via_diameter": 0.6,
+            "via_drill": 0.3,
+            "wire_width": 6,
+        },
+        {
+            "bus_width": 12,
+            "clearance": 0.2,
+            "diff_pair_gap": 0.25,
+            "diff_pair_via_gap": 0.25,
+            "diff_pair_width": 0.2,
+            "line_style": 0,
+            "microvia_diameter": 0.3,
+            "microvia_drill": 0.1,
+            "name": "CONTROL",
+            "pcb_color": "rgba(0, 220, 220, 0.800)",
+            "priority": 100,
+            "schematic_color": "rgba(0, 220, 220, 0.800)",
+            "track_width": 0.25,
+            "tuning_profile": "",
+            "via_diameter": 0.6,
+            "via_drill": 0.3,
+            "wire_width": 6,
+        },
+    ]
+    data["net_settings"]["netclass_patterns"] = [
+        {"netclass": "HIGH_CURRENT_3V3", "pattern": "+3V3_*"},
+        {"netclass": "HIGH_CURRENT_5V", "pattern": "+5V_*"},
+        {"netclass": "HIGH_CURRENT_12V", "pattern": "+12V_*"},
+        {"netclass": "HIGH_CURRENT_16V8", "pattern": "+16V8_*"},
+        {"netclass": "GND_POWER", "pattern": "GND"},
+        {"netclass": "I2C", "pattern": "I2C_*"},
+        {"netclass": "CONTROL", "pattern": "RESET_*"},
+        {"netclass": "CONTROL", "pattern": "ARD_RESET_*"},
+        {"netclass": "CONTROL", "pattern": "GATE_*"},
+        {"netclass": "CONTROL", "pattern": "FLT_*"},
+        {"netclass": "CONTROL", "pattern": "ATX_*"},
+        {"netclass": "CONTROL", "pattern": "+ARDUINO_5V"},
+        {"netclass": "CONTROL", "pattern": "+5VSB"},
+    ]
+    data["net_settings"]["netclass_assignments"] = None
+    data["net_settings"]["net_colors"] = None
     PRO.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
 
@@ -631,13 +829,33 @@ def write_board() -> None:
         return net_items[name]
 
     placements = {
-        "J1": (8, 55, 90), "J2": (15, 124, 0), "J3": (42, 124, 0), "J4": (163, 92, 90),
-        "A1": (39, 29, 90), "U9": (40, 96, 0),
-        "U1": (72, 36, 0), "U2": (72, 60, 0), "U3": (72, 84, 0), "U4": (72, 108, 0),
-        "U5": (91, 36, 0), "U6": (91, 60, 0), "U7": (91, 84, 0), "U8": (91, 108, 0),
-        "JH1": (130, 8, 0), "JH2": (143, 8, 0),
-        "SW1": (110, 124, 0), "SW2": (125, 124, 0), "SW3": (140, 124, 0), "SW4": (155, 124, 0),
-        "Q1": (110, 116, 0), "Q2": (125, 116, 0), "Q3": (140, 116, 0), "Q4": (155, 116, 0), "Q5": (62, 124, 0),
+        "J1": (10, 72, 90), "J2": (16, 160, 0), "J3": (45, 160, 0), "J4": (222, 52, 90),
+        "A1": (36, 24, 90), "U9": (198, 118, 0),
+        "U1": (82, 40, 0), "U2": (82, 70, 0), "U3": (82, 100, 0), "U4": (82, 130, 0),
+        "U5": (112, 40, 0), "U6": (112, 70, 0), "U7": (112, 100, 0), "U8": (112, 130, 0),
+        "JH1": (158, 18, 0), "JH2": (176, 18, 0),
+        "SW1": (104, 160, 0), "SW2": (126, 160, 0), "SW3": (148, 160, 0), "SW4": (170, 160, 0),
+        "Q1": (104, 150, 0), "Q2": (126, 150, 0), "Q3": (148, 150, 0), "Q4": (170, 150, 0), "Q5": (65, 160, 0),
+        "C1": (69, 32, 0), "C2": (96, 32, 0), "C3": (69, 62, 0), "C4": (96, 62, 0),
+        "C5": (69, 92, 0), "C6": (96, 92, 0), "C7": (88, 122, 0), "C8": (96, 122, 0),
+        "R1": (69, 48, 0), "R2": (54, 28, 0), "R3": (62, 28, 0), "R4": (54, 52, 0), "R5": (62, 52, 0),
+        "R8": (132, 32, 0), "R9": (69, 78, 0), "R10": (54, 58, 0), "R11": (62, 58, 0),
+        "R12": (54, 82, 0), "R13": (62, 82, 0), "R16": (132, 62, 0), "R17": (69, 108, 0),
+        "R18": (54, 88, 0), "R19": (62, 88, 0), "R20": (54, 112, 0), "R21": (62, 112, 0),
+        "R24": (132, 92, 0), "R25": (69, 138, 0), "R26": (54, 118, 0), "R27": (62, 118, 0),
+        "R28": (54, 142, 0), "R29": (62, 142, 0), "R32": (132, 122, 0),
+        "R6": (100, 144, 0), "R7": (108, 144, 0), "R14": (122, 144, 0), "R15": (130, 144, 0),
+        "R22": (144, 144, 0), "R23": (152, 144, 0), "R30": (166, 144, 0), "R31": (174, 144, 0),
+        "R33": (62, 150, 0), "R34": (70, 150, 0),
+        "TP1": (73, 30, 0), "TP2": (98, 26, 0), "TP3": (126, 48, 0),
+        "TP4": (73, 60, 0), "TP5": (98, 56, 0), "TP6": (126, 78, 0),
+        "TP7": (73, 90, 0), "TP8": (98, 86, 0), "TP9": (126, 108, 0),
+        "TP10": (92, 124, 0), "TP11": (98, 116, 0), "TP12": (126, 138, 0),
+        "TP13": (32, 150, 0), "TP14": (114, 26, 0), "TP15": (121, 26, 0),
+        "TP16": (56, 160, 0), "TP17": (78, 30, 0), "TP18": (32, 154, 0),
+        "TP19": (96, 152, 0), "TP20": (118, 152, 0), "TP21": (140, 152, 0), "TP22": (162, 152, 0),
+        "TP23": (132, 36, 0), "TP24": (132, 66, 0), "TP25": (132, 96, 0), "TP26": (132, 126, 0),
+        "TP27": (176, 106, 0), "TP28": (220, 106, 0), "TP29": (178, 126, 0),
     }
 
     # Compact autogenerated fallback placement for passives and test points.
@@ -646,7 +864,7 @@ def write_board() -> None:
         if c.ref not in placements:
             if c.ref.startswith("TP"):
                 idx = int(c.ref[2:]) - 1
-                placements[c.ref] = (92 + (idx % 6) * 6, 4 + (idx // 6) * 5, 0)
+                placements[c.ref] = (88 + (idx % 10) * 7, 5 + (idx // 10) * 6, 0)
             elif c.ref.startswith("R"):
                 idx = int(c.ref[1:]) - 1
                 placements[c.ref] = (106 + (idx % 7) * 7, 75 + (idx // 7) * 5, 0)
@@ -672,8 +890,8 @@ def write_board() -> None:
                 pad.SetNet(netinfo(net))
         board.Add(fp)
 
-    # Board outline: 170 mm x 130 mm, kept compact while clearing the boost module, PC/104 headers, reset row, and terminals.
-    outline = [(0, 0), (170, 0), (170, 130), (0, 130), (0, 0)]
+    # Board outline: clarity/testability layout with module clearance and accessible edge connectors.
+    outline = [(0, 0), (230, 0), (230, 170), (0, 170), (0, 0)]
     for (x1, y1), (x2, y2) in zip(outline, outline[1:]):
         seg = pcbnew.PCB_SHAPE(board)
         seg.SetShape(pcbnew.SHAPE_T_SEGMENT)
@@ -692,12 +910,12 @@ def write_board() -> None:
         t.SetTextThickness(int(0.15 * 1_000_000))
         board.Add(t)
 
-    add_text("EPS POWER TEST - 2 OZ Cu RECOMMENDED", 72, 126, 1.0)
+    add_text("EPS POWER TEST - 2 OZ Cu RECOMMENDED", 82, 166, 1.0)
     add_text("ATX INPUTS", 15, 6, 1.0)
-    add_text("RESET_3V3 RESET_5V RESET_12V RESET_16V8", 66, 121, 0.85)
-    add_text("BOOST 60x42 VERIFIED", 18, 72, 0.9)
-    add_text("H1/H2 POWER/GND ONLY", 112, 6, 0.9)
-    add_text("RAW -> EFUSE -> INA260 -> OUTPUT", 52, 31, 0.9)
+    add_text("RESET_3V3 RESET_5V RESET_12V RESET_16V8", 90, 154, 0.85)
+    add_text("BOOST 60x42 VERIFIED", 166, 94, 0.9)
+    add_text("H1/H2 POWER/GND ONLY", 146, 8, 0.9)
+    add_text("RAW -> EFUSE -> INA260 -> OUTPUT", 104, 22, 0.9)
 
     pcbnew.SaveBoard(str(PCB), board)
 

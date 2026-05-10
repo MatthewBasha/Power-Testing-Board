@@ -1,0 +1,97 @@
+Designator,Value,Footprint,Category,Install responsibility,LCSC Part #,Manufacturer Part # / Notes
+A1,Arduino Nano USB-powered socket,Arduino_Nano,Manual/serviceable,Install manually after PCBA,N/A,Arduino Nano USB-powered socket
+C1,1uF 25V X7R input close to eFuse,C_0805_2012Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+C2,10uF 25V X7R output close to eFuse,C_0805_2012Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+C3,1uF 25V X7R input close to eFuse,C_0805_2012Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+C4,10uF 25V X7R output close to eFuse,C_0805_2012Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+C5,1uF 50V X7R input close to eFuse,C_0805_2012Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+C6,10uF 50V X7R output close to eFuse,C_0805_2012Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+C7,1uF 50V X7R input close to eFuse,C_0805_2012Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+C8,10uF 50V X7R output close to eFuse,C_0805_2012Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+J1,J_ATX_PWR: 3V3 3V3 5V 5V 12V 12V GNDx4,TerminalBlock_MaiXu_MX126-5.0-10P_1x10_P5.00mm,Manual/serviceable,Install manually after PCBA,N/A,J_ATX_PWR: 3V3 3V3 5V 5V 12V 12V GNDx4
+J2,J_ATX_CTRL: PS_ON PWR_OK 5VSB GND,TerminalBlock_MaiXu_MX126-5.0-04P_1x04_P5.00mm,Manual/serviceable,Install manually after PCBA,N/A,J_ATX_CTRL: PS_ON PWR_OK 5VSB GND
+J3,ATX_SWITCH,TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm,Manual/serviceable,Install manually after PCBA,N/A,ATX_SWITCH
+J4,DEDICATED OUTPUTS: 3V3/G 5V/G 12V/G 16V8/G,TerminalBlock_MaiXu_MX126-5.0-08P_1x08_P5.00mm,Manual/serviceable,Install manually after PCBA,N/A,DEDICATED OUTPUTS: 3V3/G 5V/G 12V/G 16V8/G
+JH1,H1 selected power/GND pins only,PinSocket_2x26_P2.54mm_Vertical,Manual/serviceable,Install manually after PCBA,N/A,H1 selected power/GND pins only
+JH2,H2 selected power/GND pins only,PinSocket_2x26_P2.54mm_Vertical,Manual/serviceable,Install manually after PCBA,N/A,H2 selected power/GND pins only
+Q1,2N7002 RESET_3V3 pulldown,SOT-23,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,"2N7002 SOT-23, select JLC basic/extended part before order"
+Q2,2N7002 RESET_5V pulldown,SOT-23,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,"2N7002 SOT-23, select JLC basic/extended part before order"
+Q3,2N7002 RESET_12V pulldown,SOT-23,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,"2N7002 SOT-23, select JLC basic/extended part before order"
+Q4,2N7002 RESET_16V8 pulldown,SOT-23,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,"2N7002 SOT-23, select JLC basic/extended part before order"
+Q5,2N7002 ATX PS_ON# pulldown,SOT-23,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,"2N7002 SOT-23, select JLC basic/extended part before order"
+R1,1.10k 1% ILM ~6A,R_0805_2012Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R2,100k 1% EN top 2.40V,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R3,100k 1% EN bottom,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R4,24.9k 1% OVLO top 4.19V,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R5,10k 1% OVLO bottom,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R6,330 gate,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R7,100k gate pulldown,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R8,10k FLT pullup,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R9,3.00k 1% ILIM ~6A,R_0805_2012Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R10,261k 1% UVLO top 4.33V,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R11,100k 1% UVLO bottom,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R12,383k 1% OVP top 5.80V,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R13,100k 1% OVP bottom,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R14,330 gate,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R15,100k gate pulldown,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R16,10k FLT pullup,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R17,3.00k 1% ILIM ~6A,R_0805_2012Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R18,806k 1% UVLO top 10.87V,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R19,100k 1% UVLO bottom,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R20,1.05M 1% OVP top 13.80V,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R21,100k 1% OVP bottom,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R22,330 gate,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R23,100k gate pulldown,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R24,10k FLT pullup,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R25,3.00k 1% ILIM ~6A,R_0805_2012Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R26,1.07M 1% UVLO top 14.04V,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R27,100k 1% UVLO bottom,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R28,1.40M 1% OVP top 18.00V,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R29,100k 1% OVP bottom,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R30,330 gate,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R31,100k gate pulldown,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R32,10k FLT pullup,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R33,330 gate,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+R34,100k gate pulldown,R_0603_1608Metric,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library
+SW1,RESET_3V3 edge button,SW_PUSH_6mm,Manual/serviceable,Install manually after PCBA,N/A,RESET_3V3 edge button
+SW2,RESET_5V edge button,SW_PUSH_6mm,Manual/serviceable,Install manually after PCBA,N/A,RESET_5V edge button
+SW3,RESET_12V edge button,SW_PUSH_6mm,Manual/serviceable,Install manually after PCBA,N/A,RESET_12V edge button
+SW4,RESET_16V8 edge button,SW_PUSH_6mm,Manual/serviceable,Install manually after PCBA,N/A,RESET_16V8 edge button
+TP1,+3V3_RAW,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+3V3_RAW
+TP2,+3V3_EFUSE_OUT,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+3V3_EFUSE_OUT
+TP3,+3V3_PROTECTED,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+3V3_PROTECTED
+TP4,+5V_RAW,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+5V_RAW
+TP5,+5V_EFUSE_OUT,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+5V_EFUSE_OUT
+TP6,+5V_PROTECTED,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+5V_PROTECTED
+TP7,+12V_RAW,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+12V_RAW
+TP8,+12V_EFUSE_OUT,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+12V_EFUSE_OUT
+TP9,+12V_PROTECTED,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+12V_PROTECTED
+TP10,+16V8_RAW,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+16V8_RAW
+TP11,+16V8_EFUSE_OUT,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+16V8_EFUSE_OUT
+TP12,+16V8_PROTECTED,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+16V8_PROTECTED
+TP13,GND,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,GND
+TP14,I2C_SDA,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,I2C_SDA
+TP15,I2C_SCL,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,I2C_SCL
+TP16,ATX_PS_ON_N,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,ATX_PS_ON_N
+TP17,ATX_PWR_OK,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,ATX_PWR_OK
+TP18,+5VSB,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,+5VSB
+TP19,RESET_3V3,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,RESET_3V3
+TP20,RESET_5V,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,RESET_5V
+TP21,RESET_12V,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,RESET_12V
+TP22,RESET_16V8,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,RESET_16V8
+TP23,FLT_3V3,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,FLT_3V3
+TP24,FLT_5V,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,FLT_5V
+TP25,FLT_12V,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,FLT_12V
+TP26,FLT_16V8,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,FLT_16V8
+TP27,BOOST_IN+ (+12V_RAW),TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,BOOST_IN+ (+12V_RAW)
+TP28,BOOST_OUT+ (+16V8_RAW),TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,BOOST_OUT+ (+16V8_RAW)
+TP29,BOOST_GND,TestPoint_Pad_D1.0mm,PCB feature / no install,Not installed,N/A,BOOST_GND
+U1,TPS259814L 3V3 eFuse latch-off,Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_VERIFY_LCSC,"TPS259814L, exact orderable package/land pattern must be verified"
+U2,TPS26631RGE 5V eFuse,Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_VERIFY_LCSC,"TPS26631RGE, exact JLC/LCSC availability must be verified"
+U3,TPS26631RGE 12V eFuse,Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_VERIFY_LCSC,"TPS26631RGE, exact JLC/LCSC availability must be verified"
+U4,TPS26631RGE 16V8 eFuse,Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias,SMD manufacturer-assembled,JLCPCB,CUSTOMER_SUPPLIED_OR_VERIFY_LCSC,"TPS26631RGE, exact JLC/LCSC availability must be verified"
+U5,INA260 3V3 module,Adafruit_INA260_4226_Module,Manual/serviceable,Install manually after PCBA,N/A,INA260 3V3 module
+U6,INA260 5V module,Adafruit_INA260_4226_Module,Manual/serviceable,Install manually after PCBA,N/A,INA260 5V module
+U7,INA260 12V module,Adafruit_INA260_4226_Module,Manual/serviceable,Install manually after PCBA,N/A,INA260 12V module
+U8,INA260 16V8 module,Adafruit_INA260_4226_Module,Manual/serviceable,Install manually after PCBA,N/A,INA260 16V8 module
+U9,Boost 12V to 16.8V module 60x42 VERIFIED,Boost_Module_60x42_VERIFIED,Manual/serviceable,Install manually after PCBA,N/A,Boost 12V to 16.8V module 60x42 VERIFIED

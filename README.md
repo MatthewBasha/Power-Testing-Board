@@ -6,9 +6,9 @@ Compact CubeSat EPS ground power-test board for ATX/boost-supplied rails.
 
 - Root KiCad project: `Power Testing board.kicad_pro`
 - Schematic was regenerated first in `Power Testing board.kicad_sch`.
-- Compact PCB placement was generated in `Power Testing board.kicad_pcb`.
-- Board outline is 170 mm x 130 mm.
-- PCB is placed but not routed yet: high-current pours/tracks must still be routed and reviewed before fabrication.
+- Serviceable PCB placement was generated in `Power Testing board.kicad_pcb`.
+- Board outline is 230 mm x 170 mm.
+- PCB is routed with rail-specific copper zones, a solid B.Cu GND plane, and final JLCPCB fabrication outputs in `fabrication/JLCPCB/`.
 
 ## Electrical Architecture
 
@@ -39,15 +39,16 @@ Keep those files committed with the KiCad project. Do not rely on absolute local
 ## Verification Notes
 
 - ERC: 0 errors, 11 warnings. Remaining warnings are isolated optional status labels such as PG, IMON, and ALERT.
-- DRC: PCB placement has no copper-clearance/courtyard errors after cleanup. Remaining issues are unrouted connections plus silkscreen warnings.
+- DRC: 0 violations, 0 unconnected items after routing and zone refill.
+- Gerbers/drills are generated in `fabrication/JLCPCB/` after the clean DRC gate.
 - Boost footprint is based on the supplied Amazon screenshots and has been physically verified: 60 mm x 42 mm x 20 mm.
 - TPS259814L footprint is marked for package/land-pattern verification against the exact ordered part.
 - eFuses are on the main PCB for compactness. If repairability becomes more important than board area, move each eFuse circuit to a plug-in daughterboard.
 - Passive component purposes, design checks, test point map, and assembly notes are documented in `docs/passive_component_purpose_table.md`.
 
-## Before Fabrication
+## Before Ordering
 
-- Route high-current rails with wide copper pours/traces for at least 8 A, preferably 10 A margin.
-- Use a solid common ground plane.
+- Review the Gerber ZIP and drill files in JLCPCB/JLCDFM before purchase.
+- Use 2 oz copper as documented in `fabrication/JLCPCB/README_ordering.md`.
 - Verify ATX, EPS/H1/H2, output terminal, boost module, INA260 module, and eFuse footprints against the physical parts.
-- Re-run ERC and DRC after routing.
+- Select/verify the LCSC or customer-supplied plan for all SMD BOM entries before placing the PCBA order.

@@ -1,0 +1,60 @@
+Final sanity check for Power Testing Board
+
+PASS: 3V3 eFuse IN: actual=+3V3_RAW expected=+3V3_RAW
+PASS: 3V3 eFuse OUT: actual=+3V3_EFUSE_OUT expected=+3V3_EFUSE_OUT
+PASS: 3V3 INA VIN+: actual=+3V3_EFUSE_OUT expected=+3V3_EFUSE_OUT
+PASS: 3V3 INA VIN-: actual=+3V3_PROTECTED expected=+3V3_PROTECTED
+PASS: 5V eFuse IN pins: actual={'+5V_RAW'} expected={'+5V_RAW'}
+PASS: 5V eFuse OUT pins: actual={'+5V_EFUSE_OUT'} expected={'+5V_EFUSE_OUT'}
+PASS: 5V INA VIN+: actual=+5V_EFUSE_OUT expected=+5V_EFUSE_OUT
+PASS: 5V INA VIN-: actual=+5V_PROTECTED expected=+5V_PROTECTED
+PASS: 12V eFuse IN pins: actual={'+12V_RAW'} expected={'+12V_RAW'}
+PASS: 12V eFuse OUT pins: actual={'+12V_EFUSE_OUT'} expected={'+12V_EFUSE_OUT'}
+PASS: 12V INA VIN+: actual=+12V_EFUSE_OUT expected=+12V_EFUSE_OUT
+PASS: 12V INA VIN-: actual=+12V_PROTECTED expected=+12V_PROTECTED
+PASS: 16V8 eFuse IN pins: actual={'+16V8_RAW'} expected={'+16V8_RAW'}
+PASS: 16V8 eFuse OUT pins: actual={'+16V8_EFUSE_OUT'} expected={'+16V8_EFUSE_OUT'}
+PASS: 16V8 INA VIN+: actual=+16V8_EFUSE_OUT expected=+16V8_EFUSE_OUT
+PASS: 16V8 INA VIN-: actual=+16V8_PROTECTED expected=+16V8_PROTECTED
+PASS: J4 +3V3 output: actual=+3V3_PROTECTED expected=+3V3_PROTECTED
+PASS: J4 +5V output: actual=+5V_PROTECTED expected=+5V_PROTECTED
+PASS: J4 +12V output: actual=+12V_PROTECTED expected=+12V_PROTECTED
+PASS: J4 +16V8 output: actual=+16V8_PROTECTED expected=+16V8_PROTECTED
+PASS: JH1 pin 48: actual=+3V3_PROTECTED expected=+3V3_PROTECTED
+PASS: JH1 pin 47: actual=+5V_PROTECTED expected=+5V_PROTECTED
+PASS: JH1 pin 49: actual=+5V_PROTECTED expected=+5V_PROTECTED
+PASS: JH1 pin 52: actual=+12V_PROTECTED expected=+12V_PROTECTED
+PASS: JH2 pin 25: actual=+5V_PROTECTED expected=+5V_PROTECTED
+PASS: JH2 pin 26: actual=+5V_PROTECTED expected=+5V_PROTECTED
+PASS: JH2 pin 27: actual=+3V3_PROTECTED expected=+3V3_PROTECTED
+PASS: JH2 pin 28: actual=+3V3_PROTECTED expected=+3V3_PROTECTED
+PASS: JH2 pin 45: actual=+16V8_PROTECTED expected=+16V8_PROTECTED
+PASS: JH2 pin 46: actual=+16V8_PROTECTED expected=+16V8_PROTECTED
+PASS: J4 GND pad 2: actual=GND expected=GND
+PASS: J4 GND pad 4: actual=GND expected=GND
+PASS: J4 GND pad 6: actual=GND expected=GND
+PASS: J4 GND pad 8: actual=GND expected=GND
+PASS: PS_ON J2 pin 1: actual=ATX_PS_ON_N expected=ATX_PS_ON_N
+PASS: PS_ON J3 pin 1: actual=ATX_PS_ON_N expected=ATX_PS_ON_N
+PASS: PS_ON Q5 drain: actual=ATX_PS_ON_N expected=ATX_PS_ON_N
+
+Rail/output sanity failures: 0
+Tracks/vias: 799 total track items, 24 vias
+Zones: 13
+  +3V3_EFUSE_OUT on F.Cu, priority 25
+  +12V_RAW on F.Cu, priority 20
+  +3V3_PROTECTED on F.Cu, priority 15
+  +3V3_RAW on F.Cu, priority 20
+  +12V_PROTECTED on F.Cu, priority 15
+  +16V8_EFUSE_OUT on F.Cu, priority 25
+  +5V_EFUSE_OUT on F.Cu, priority 25
+  +5V_RAW on B.Cu, priority 20
+  +16V8_PROTECTED on B.Cu, priority 15
+  +16V8_RAW on B.Cu, priority 20
+  +5V_PROTECTED on B.Cu, priority 15
+  GND on B.Cu, priority 0
+  +12V_EFUSE_OUT on B.Cu, priority 25
+
+BOM/CPL SMD refs: BOM=51 CPL=51 missing_in_CPL=[] missing_in_BOM=[]
+DRC: see DRC_report.txt; expected 0 violations and 0 unconnected items.
+ERC: see ERC_report.txt; expected 0 errors and 11 optional isolated-label warnings.

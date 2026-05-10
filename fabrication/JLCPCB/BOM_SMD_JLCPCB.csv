@@ -1,0 +1,31 @@
+Comment,Designator,Footprint,LCSC Part #,Manufacturer Part #,Assembly
+1uF 25V X7R input close to eFuse,"C1,C3",C_0805_2012Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+10uF 25V X7R output close to eFuse,"C2,C4",C_0805_2012Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+1uF 50V X7R input close to eFuse,"C5,C7",C_0805_2012Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+10uF 50V X7R output close to eFuse,"C6,C8",C_0805_2012Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+2N7002 RESET_3V3 pulldown,Q1,SOT-23,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,"2N7002 SOT-23, select JLC basic/extended part before order",JLCPCB SMD top-side assembly
+2N7002 RESET_5V pulldown,Q2,SOT-23,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,"2N7002 SOT-23, select JLC basic/extended part before order",JLCPCB SMD top-side assembly
+2N7002 RESET_12V pulldown,Q3,SOT-23,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,"2N7002 SOT-23, select JLC basic/extended part before order",JLCPCB SMD top-side assembly
+2N7002 RESET_16V8 pulldown,Q4,SOT-23,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,"2N7002 SOT-23, select JLC basic/extended part before order",JLCPCB SMD top-side assembly
+2N7002 ATX PS_ON# pulldown,Q5,SOT-23,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,"2N7002 SOT-23, select JLC basic/extended part before order",JLCPCB SMD top-side assembly
+1.10k 1% ILM ~6A,R1,R_0805_2012Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+261k 1% UVLO top 4.33V,R10,R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+100k 1% UVLO bottom,"R11,R19,R27",R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+383k 1% OVP top 5.80V,R12,R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+100k 1% OVP bottom,"R13,R21,R29",R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+806k 1% UVLO top 10.87V,R18,R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+100k 1% EN top 2.40V,R2,R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+1.05M 1% OVP top 13.80V,R20,R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+1.07M 1% UVLO top 14.04V,R26,R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+1.40M 1% OVP top 18.00V,R28,R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+100k 1% EN bottom,R3,R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+24.9k 1% OVLO top 4.19V,R4,R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+10k 1% OVLO bottom,R5,R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+330 gate,"R6,R14,R22,R30,R33",R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+100k gate pulldown,"R7,R15,R23,R31,R34",R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+10k FLT pullup,"R8,R16,R24,R32",R_0603_1608Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+3.00k 1% ILIM ~6A,"R9,R17,R25",R_0805_2012Metric,CUSTOMER_SUPPLIED_OR_SELECT_LCSC,Generic passive; select voltage/tolerance/package in JLC parts library,JLCPCB SMD top-side assembly
+TPS259814L 3V3 eFuse latch-off,U1,Texas_RPU0010A_VQFN-HR-10_2x2mm_P0.5mm,CUSTOMER_SUPPLIED_OR_VERIFY_LCSC,"TPS259814L, exact orderable package/land pattern must be verified",JLCPCB SMD top-side assembly
+TPS26631RGE 5V eFuse,U2,Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias,CUSTOMER_SUPPLIED_OR_VERIFY_LCSC,"TPS26631RGE, exact JLC/LCSC availability must be verified",JLCPCB SMD top-side assembly
+TPS26631RGE 12V eFuse,U3,Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias,CUSTOMER_SUPPLIED_OR_VERIFY_LCSC,"TPS26631RGE, exact JLC/LCSC availability must be verified",JLCPCB SMD top-side assembly
+TPS26631RGE 16V8 eFuse,U4,Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias,CUSTOMER_SUPPLIED_OR_VERIFY_LCSC,"TPS26631RGE, exact JLC/LCSC availability must be verified",JLCPCB SMD top-side assembly

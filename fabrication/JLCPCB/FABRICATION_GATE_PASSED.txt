@@ -1,0 +1,2 @@
+KiCad DRC passed with 0 violations and 0 unconnected items before Gerber/drill generation.
+Still perform JLCPCB/JLCDFM preview and BOM/CPL/LCSC part review before purchase.

@@ -9,5 +9,4 @@ fp-info-cache
 *erc*.rpt
 *drc*.rpt
 gerbers/
-fabrication/
 __pycache__/
