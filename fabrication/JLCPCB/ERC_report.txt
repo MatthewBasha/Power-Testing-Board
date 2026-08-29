@@ -1,40 +1,40 @@
-ERC report (2026-05-10T00:28:48, Encoding UTF8)
+ERC report (2026-06-02T22:53:06, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(81.28 mm, 54.61 mm): Label 'PG_3V3'
+    @(157.48 mm, 67.31 mm): Label 'PG_3V3'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(83.82 mm, 119.38 mm): Label 'PG_5V'
+    @(160.02 mm, 152.40 mm): Label 'PG_5V'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(83.82 mm, 124.46 mm): Label 'IMON_5V'
+    @(160.02 mm, 157.48 mm): Label 'IMON_5V'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(138.43 mm, 69.85 mm): Label 'ALERT_3V3'
+    @(262.89 mm, 82.55 mm): Label 'ALERT_3V3'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(138.43 mm, 129.54 mm): Label 'ALERT_5V'
+    @(160.02 mm, 232.41 mm): Label 'PG_12V'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(83.82 mm, 179.07 mm): Label 'PG_12V'
+    @(160.02 mm, 237.49 mm): Label 'IMON_12V'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(83.82 mm, 184.15 mm): Label 'IMON_12V'
+    @(262.89 mm, 162.56 mm): Label 'ALERT_5V'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(138.43 mm, 189.23 mm): Label 'ALERT_12V'
+    @(160.02 mm, 297.18 mm): Label 'PG_16V8'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(83.82 mm, 240.03 mm): Label 'PG_16V8'
+    @(160.02 mm, 302.26 mm): Label 'IMON_16V8'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(83.82 mm, 245.11 mm): Label 'IMON_16V8'
+    @(262.89 mm, 242.57 mm): Label 'ALERT_12V'
 [isolated_pin_label]: Label connected to only one pin
     ; warning
-    @(138.43 mm, 250.19 mm): Label 'ALERT_16V8'
+    @(262.89 mm, 307.34 mm): Label 'ALERT_16V8'
 
  ** ERC messages: 11  Errors 0  Warnings 11
 

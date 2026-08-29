@@ -26,8 +26,9 @@ All SMD parts are on the top side in the current placement. The CPL rotations ar
 ## Important checks
 
 - DRC currently has 0 violations and 0 unconnected items after routing and zone fill.
-- High-current rails have rail-specific copper zones plus existing routed connectivity; short neck-downs remain at fine-pitch eFuse pins and module/header pads.
+- High-current rails have rail-specific copper zones on outer copper and L3/In2.Cu plus existing routed connectivity; short neck-downs remain at fine-pitch eFuse pins and module/header pads.
 - LCSC/JLCPCB part numbers are marked customer-supplied/select-LCSC and must be selected/verified before PCBA order.
 - U1 package/land pattern must be verified against the exact TPS259814L orderable part.
 - No KiCad DRC or unconnected-net blockers remain.
+- The PCB is configured as a 4-layer board with L2 as the solid GND reference plane and L3 as bulk power distribution.
 - Final external JLCPCB/JLCDFM preview and LCSC/customer-supplied part selection still need human review before purchase.

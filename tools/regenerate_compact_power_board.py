@@ -216,18 +216,18 @@ def make_symbols() -> None:
     for i, pin in enumerate(h1_selected):
         side = -12.7 if i % 2 == 0 else 12.7
         angle = 0 if side < 0 else 180
-        y = 15.24 - (i // 2) * 2.54
+        y = 22.86 - (i // 2) * 7.62
         h1_pins.append(Pin(str(pin), f"H1_{pin}", side, y, angle))
-    add_symbol(SymbolDef("PC104_H1_SelectedPowerPins", "J", h1_pins, "Connector_PinSocket_2.54mm:PinSocket_2x26_P2.54mm_Vertical", "~", "PC/104 H1 selected mission power/GND pins only", 20, 36))
+    add_symbol(SymbolDef("PC104_H1_SelectedPowerPins", "J", h1_pins, "Connector_PinSocket_2.54mm:PinSocket_2x26_P2.54mm_Vertical", "~", "PC/104 H1 selected mission power/GND pins only", 20, 80))
 
     h2_pins = []
     h2_selected = [25, 26, 27, 28, 29, 30, 31, 32, 36, 39, 40, 41, 42, 43, 44, 45, 46]
     for i, pin in enumerate(h2_selected):
         side = -12.7 if i % 2 == 0 else 12.7
         angle = 0 if side < 0 else 180
-        y = 20.32 - (i // 2) * 2.54
+        y = 30.48 - (i // 2) * 7.62
         h2_pins.append(Pin(str(pin), f"H2_{pin}", side, y, angle))
-    add_symbol(SymbolDef("PC104_H2_SelectedPowerPins", "J", h2_pins, "Connector_PinSocket_2.54mm:PinSocket_2x26_P2.54mm_Vertical", "~", "PC/104 H2 selected mission power/GND pins only", 20, 46))
+    add_symbol(SymbolDef("PC104_H2_SelectedPowerPins", "J", h2_pins, "Connector_PinSocket_2.54mm:PinSocket_2x26_P2.54mm_Vertical", "~", "PC/104 H2 selected mission power/GND pins only", 20, 96))
 
 
 def add(ref: str, symbol: str, value: str, footprint: str, x: float, y: float, pin_nets: dict[str, str], rot: float = 0.0, on_board: bool = True) -> None:
@@ -250,7 +250,10 @@ def add_tp(ref: str, net: str, x: float, y: float, label: str | None = None) -> 
 
 
 def make_components() -> None:
-    add("A1", "Arduino_Nano_USB_Powered", "Arduino Nano USB-powered socket", "Module:Arduino_Nano", 30, 38, {
+    # Schematic placement is intentionally roomy and review-oriented.  The PCB
+    # placement is handled separately in write_board(), so these coordinates can
+    # prioritize readability without disturbing the routed layout.
+    add("A1", "Arduino_Nano_USB_Powered", "Arduino Nano USB-powered socket", "Module:Arduino_Nano", 80, 380, {
         "4": "GND", "29": "GND", "27": "+ARDUINO_5V",
         "23": "I2C_SDA", "24": "I2C_SCL",
         "5": "ARD_RESET_3V3", "6": "ARD_RESET_5V", "7": "ARD_RESET_12V", "8": "ARD_RESET_16V8",
@@ -258,30 +261,30 @@ def make_components() -> None:
         "13": "ATX_PS_ON_CTL", "14": "ATX_PWR_OK",
     }, rot=90)
 
-    add("J1", "Conn_01x10", "J_ATX_PWR: 3V3 3V3 5V 5V 12V 12V GNDx4", "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-10P_1x10_P5.00mm", 18, 75, {
+    add("J1", "Conn_01x10", "J_ATX_PWR: 3V3 3V3 5V 5V 12V 12V GNDx4", "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-10P_1x10_P5.00mm", 40, 82, {
         "1": "+3V3_RAW", "2": "+3V3_RAW", "3": "+5V_RAW", "4": "+5V_RAW", "5": "+12V_RAW", "6": "+12V_RAW",
         "7": "GND", "8": "GND", "9": "GND", "10": "GND",
     }, rot=90)
-    add("J2", "Conn_01x04", "J_ATX_CTRL: PS_ON PWR_OK 5VSB GND", "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-04P_1x04_P5.00mm", 18, 130, {
+    add("J2", "Conn_01x04", "J_ATX_CTRL: PS_ON PWR_OK 5VSB GND", "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-04P_1x04_P5.00mm", 40, 142, {
         "1": "ATX_PS_ON_N", "2": "ATX_PWR_OK", "3": "+5VSB", "4": "GND",
     }, rot=90)
-    add("J3", "Conn_01x02", "ATX_SWITCH", "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm", 18, 154, {
+    add("J3", "Conn_01x02", "ATX_SWITCH", "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm", 40, 166, {
         "1": "ATX_PS_ON_N", "2": "GND",
     }, rot=90)
-    add("J4", "Conn_01x08", "DEDICATED OUTPUTS: 3V3/G 5V/G 12V/G 16V8/G", "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-08P_1x08_P5.00mm", 250, 120, {
+    add("J4", "Conn_01x08", "DEDICATED OUTPUTS: 3V3/G 5V/G 12V/G 16V8/G", "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-08P_1x08_P5.00mm", 430, 145, {
         "1": "+3V3_PROTECTED", "2": "GND", "3": "+5V_PROTECTED", "4": "GND",
         "5": "+12V_PROTECTED", "6": "GND", "7": "+16V8_PROTECTED", "8": "GND",
     }, rot=90)
 
-    add("U9", "Boost_Module_60x42", "Boost 12V to 16.8V module 60x42 VERIFIED", "Power_Testing_Board:Boost_Module_60x42_VERIFIED", 58, 270, {
+    add("U9", "Boost_Module_60x42", "Boost 12V to 16.8V module 60x42 VERIFIED", "Power_Testing_Board:Boost_Module_60x42_VERIFIED", 58, 260, {
         "1": "GND", "2": "+12V_RAW", "3": "GND", "4": "+16V8_RAW",
     })
 
     rails = [
-        ("3V3", "U1", "TPS259814L_RPW_eFuse", "+3V3_RAW", "+3V3_EFUSE_OUT", "+3V3_PROTECTED", "RESET_3V3", "ARD_RESET_3V3", "FLT_3V3", 68, 62),
-        ("5V", "U2", "TPS26631RGE_eFuse", "+5V_RAW", "+5V_EFUSE_OUT", "+5V_PROTECTED", "RESET_5V", "ARD_RESET_5V", "FLT_5V", 68, 122),
-        ("12V", "U3", "TPS26631RGE_eFuse", "+12V_RAW", "+12V_EFUSE_OUT", "+12V_PROTECTED", "RESET_12V", "ARD_RESET_12V", "FLT_12V", 68, 182),
-        ("16V8", "U4", "TPS26631RGE_eFuse", "+16V8_RAW", "+16V8_EFUSE_OUT", "+16V8_PROTECTED", "RESET_16V8", "ARD_RESET_16V8", "FLT_16V8", 68, 242),
+        ("3V3", "U1", "TPS259814L_RPW_eFuse", "+3V3_RAW", "+3V3_EFUSE_OUT", "+3V3_PROTECTED", "RESET_3V3", "ARD_RESET_3V3", "FLT_3V3", 145, 75),
+        ("5V", "U2", "TPS26631RGE_eFuse", "+5V_RAW", "+5V_EFUSE_OUT", "+5V_PROTECTED", "RESET_5V", "ARD_RESET_5V", "FLT_5V", 145, 155),
+        ("12V", "U3", "TPS26631RGE_eFuse", "+12V_RAW", "+12V_EFUSE_OUT", "+12V_PROTECTED", "RESET_12V", "ARD_RESET_12V", "FLT_12V", 145, 235),
+        ("16V8", "U4", "TPS26631RGE_eFuse", "+16V8_RAW", "+16V8_EFUSE_OUT", "+16V8_PROTECTED", "RESET_16V8", "ARD_RESET_16V8", "FLT_16V8", 145, 300),
     ]
 
     rnum = 1
@@ -294,17 +297,17 @@ def make_components() -> None:
                 "1": reset, "2": f"OVLO_{name}", "5": raw, "8": "GND", "9": f"ILIM_{name}",
                 "6": efout, "3": f"PG_{name}", "4": flt,
             })
-            add_res(f"R{rnum}", "1.10k 1% ILM ~6A", f"ILIM_{name}", "GND", x - 14, y + 19, "Resistor_SMD:R_0805_2012Metric"); rnum += 1
-            add_res(f"R{rnum}", "100k 1% EN top 2.40V", raw, reset, x - 20, y - 14); rnum += 1
-            add_res(f"R{rnum}", "100k 1% EN bottom", reset, "GND", x - 7, y - 14); rnum += 1
-            add_res(f"R{rnum}", "24.9k 1% OVLO top 4.19V", raw, f"OVLO_{name}", x + 9, y - 14); rnum += 1
-            add_res(f"R{rnum}", "10k 1% OVLO bottom", f"OVLO_{name}", "GND", x + 22, y - 14); rnum += 1
+            add_res(f"R{rnum}", "1.10k 1% ILM ~6A", f"ILIM_{name}", "GND", x - 38, y + 30, "Resistor_SMD:R_0805_2012Metric"); rnum += 1
+            add_res(f"R{rnum}", "100k 1% EN top 2.40V", raw, reset, x - 55, y - 28); rnum += 1
+            add_res(f"R{rnum}", "100k 1% EN bottom", reset, "GND", x - 32, y - 28); rnum += 1
+            add_res(f"R{rnum}", "24.9k 1% OVLO top 4.19V", raw, f"OVLO_{name}", x + 28, y - 28); rnum += 1
+            add_res(f"R{rnum}", "10k 1% OVLO bottom", f"OVLO_{name}", "GND", x + 52, y - 28); rnum += 1
         else:
             add(uref, sym, f"TPS26631RGE {name} eFuse", "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm_ThermalVias", x, y, {
                 "1": raw, "2": raw, "5": raw, "6": f"UVLO_{name}", "7": f"OVP_{name}", "8": "GND", "10": f"ILIM_{name}", "12": reset, "25": "GND",
                 "17": efout, "18": efout, "14": flt, "16": f"PG_{name}", "13": f"IMON_{name}",
             })
-            add_res(f"R{rnum}", "3.00k 1% ILIM ~6A", f"ILIM_{name}", "GND", x - 14, y + 22, "Resistor_SMD:R_0805_2012Metric"); rnum += 1
+            add_res(f"R{rnum}", "3.00k 1% ILIM ~6A", f"ILIM_{name}", "GND", x - 38, y + 36, "Resistor_SMD:R_0805_2012Metric"); rnum += 1
             # TPS26631 UVLO/OVP dividers use the 1.20 V typical rising threshold.
             # Threshold = 1.20 V * (Rtop + Rbottom) / Rbottom.
             vals = {
@@ -312,34 +315,35 @@ def make_components() -> None:
                 "12V": ("806k 1% UVLO top 10.87V", "100k 1% UVLO bottom", "1.05M 1% OVP top 13.80V", "100k 1% OVP bottom"),
                 "16V8": ("1.07M 1% UVLO top 14.04V", "100k 1% UVLO bottom", "1.40M 1% OVP top 18.00V", "100k 1% OVP bottom"),
             }[name]
-            add_res(f"R{rnum}", vals[0], raw, f"UVLO_{name}", x - 23, y - 23); rnum += 1
-            add_res(f"R{rnum}", vals[1], f"UVLO_{name}", "GND", x - 7, y - 23); rnum += 1
-            add_res(f"R{rnum}", vals[2], raw, f"OVP_{name}", x + 9, y - 23); rnum += 1
-            add_res(f"R{rnum}", vals[3], f"OVP_{name}", "GND", x + 25, y - 23); rnum += 1
+            add_res(f"R{rnum}", vals[0], raw, f"UVLO_{name}", x - 58, y - 32); rnum += 1
+            add_res(f"R{rnum}", vals[1], f"UVLO_{name}", "GND", x - 34, y - 32); rnum += 1
+            add_res(f"R{rnum}", vals[2], raw, f"OVP_{name}", x + 24, y - 32); rnum += 1
+            add_res(f"R{rnum}", vals[3], f"OVP_{name}", "GND", x + 48, y - 32); rnum += 1
 
         vin_rating = "25V" if name in {"3V3", "5V"} else "50V"
-        add_cap(f"C{cnum}", f"1uF {vin_rating} X7R input close to eFuse", raw, "GND", x - 22, y + 14); cnum += 1
-        add_cap(f"C{cnum}", f"10uF {vin_rating} X7R output close to eFuse", efout, "GND", x + 22, y + 14); cnum += 1
+        add_cap(f"C{cnum}", f"1uF {vin_rating} X7R input close to eFuse", raw, "GND", x - 62, y + 22); cnum += 1
+        add_cap(f"C{cnum}", f"10uF {vin_rating} X7R output close to eFuse", efout, "GND", x + 62, y + 22); cnum += 1
 
-        add(f"U{5 + idx}", "Adafruit_INA260_4226_Module", f"INA260 {name} module", "Power_Testing_Board:Adafruit_INA260_4226_Module", x + 58, y, {
+        add(f"U{5 + idx}", "Adafruit_INA260_4226_Module", f"INA260 {name} module", "Power_Testing_Board:Adafruit_INA260_4226_Module", x + 105, y, {
             "7": efout, "8": prot, "1": "+ARDUINO_5V", "2": "GND", "3": "I2C_SCL", "4": "I2C_SDA", "5": f"ALERT_{name}",
         })
 
-        add(f"SW{sw_num}", "SW_Push", f"{reset} edge button", "Button_Switch_THT:SW_PUSH_6mm", 190 + (sw_num - 1) * 18, 282, {"1": reset, "2": "GND"}); sw_num += 1
-        add(f"Q{qnum}", "NMOS_GSD", f"2N7002 {reset} pulldown", "Package_TO_SOT_SMD:SOT-23", 182 + (qnum - 1) * 18, 270, {"1": f"GATE_{name}", "2": "GND", "3": reset}); qnum += 1
-        add_res(f"R{rnum}", "330 gate", ard_reset, f"GATE_{name}", 180 + (idx * 18), 260); rnum += 1
-        add_res(f"R{rnum}", "100k gate pulldown", f"GATE_{name}", "GND", 180 + (idx * 18), 265); rnum += 1
-        add_res(f"R{rnum}", "10k FLT pullup", flt, "+ARDUINO_5V", 170, 55 + idx * 18); rnum += 1
+        reset_x = 190 + (sw_num - 1) * 55
+        add(f"SW{sw_num}", "SW_Push", f"{reset} edge button", "Button_Switch_THT:SW_PUSH_6mm", reset_x, 406, {"1": reset, "2": "GND"}); sw_num += 1
+        add(f"Q{qnum}", "NMOS_GSD", f"2N7002 {reset} pulldown", "Package_TO_SOT_SMD:SOT-23", reset_x, 386, {"1": f"GATE_{name}", "2": "GND", "3": reset}); qnum += 1
+        add_res(f"R{rnum}", "330 gate", ard_reset, f"GATE_{name}", reset_x - 5, 358); rnum += 1
+        add_res(f"R{rnum}", "100k gate pulldown", f"GATE_{name}", "GND", reset_x + 18, 358); rnum += 1
+        add_res(f"R{rnum}", "10k FLT pullup", flt, "+ARDUINO_5V", 405, y + 22); rnum += 1
 
-    add("Q5", "NMOS_GSD", "2N7002 ATX PS_ON# pulldown", "Package_TO_SOT_SMD:SOT-23", 34, 246, {"1": "GATE_PS_ON", "2": "GND", "3": "ATX_PS_ON_N"})
-    add_res(f"R{rnum}", "330 gate", "ATX_PS_ON_CTL", "GATE_PS_ON", 34, 236); rnum += 1
-    add_res(f"R{rnum}", "100k gate pulldown", "GATE_PS_ON", "GND", 34, 241); rnum += 1
+    add("Q5", "NMOS_GSD", "2N7002 ATX PS_ON# pulldown", "Package_TO_SOT_SMD:SOT-23", 58, 205, {"1": "GATE_PS_ON", "2": "GND", "3": "ATX_PS_ON_N"})
+    add_res(f"R{rnum}", "330 gate", "ATX_PS_ON_CTL", "GATE_PS_ON", 48, 188); rnum += 1
+    add_res(f"R{rnum}", "100k gate pulldown", "GATE_PS_ON", "GND", 72, 188); rnum += 1
 
-    add("JH1", "PC104_H1_SelectedPowerPins", "H1 selected power/GND pins only", "Connector_PinSocket_2.54mm:PinSocket_2x26_P2.54mm_Vertical", 250, 70, {
+    add("JH1", "PC104_H1_SelectedPowerPins", "H1 selected power/GND pins only", "Connector_PinSocket_2.54mm:PinSocket_2x26_P2.54mm_Vertical", 492, 95, {
         **{str(p): "GND" for p in [22, 24, 27, 31, 32, 36, 39, 40, 42]},
         "47": "+5V_PROTECTED", "49": "+5V_PROTECTED", "48": "+3V3_PROTECTED", "52": "+12V_PROTECTED",
     })
-    add("JH2", "PC104_H2_SelectedPowerPins", "H2 selected power/GND pins only", "Connector_PinSocket_2.54mm:PinSocket_2x26_P2.54mm_Vertical", 250, 168, {
+    add("JH2", "PC104_H2_SelectedPowerPins", "H2 selected power/GND pins only", "Connector_PinSocket_2.54mm:PinSocket_2x26_P2.54mm_Vertical", 492, 225, {
         "25": "+5V_PROTECTED", "26": "+5V_PROTECTED", "27": "+3V3_PROTECTED", "28": "+3V3_PROTECTED",
         **{str(p): "GND" for p in [29, 30, 31, 32, 36, 39, 40, 41, 42, 43, 44]},
         "45": "+16V8_PROTECTED", "46": "+16V8_PROTECTED",
@@ -355,10 +359,10 @@ def make_components() -> None:
         "FLT_3V3", "FLT_5V", "FLT_12V", "FLT_16V8",
     ]
     for i, net in enumerate(tp_nets, start=1):
-        add_tp(f"TP{i}", net, 218 + (i % 2) * 14, 25 + (i // 2) * 4)
-    add_tp("TP27", "+12V_RAW", 218, 83, "BOOST_IN+ (+12V_RAW)")
-    add_tp("TP28", "+16V8_RAW", 232, 83, "BOOST_OUT+ (+16V8_RAW)")
-    add_tp("TP29", "GND", 218, 87, "BOOST_GND")
+        add_tp(f"TP{i}", net, 568, 40 + i * 10)
+    add_tp("TP27", "+12V_RAW", 568, 318, "BOOST_IN+ (+12V_RAW)")
+    add_tp("TP28", "+16V8_RAW", 568, 332, "BOOST_OUT+ (+16V8_RAW)")
+    add_tp("TP29", "GND", 568, 346, "BOOST_GND")
 
 
 def write_symbol_library() -> None:
@@ -532,7 +536,7 @@ def write_tables_and_gitignore() -> None:
 def write_schematic() -> None:
     lib_symbols = symbol_lib_body_for_schematic()
     items: list[str] = []
-    items.append('  (title_block (title "Compact CubeSat EPS Power Testing Board") (rev "2") (company "CSULB SHARKSAT TEAM"))')
+    items.append('  (title_block (title "CubeSat EPS Power Testing Board - 4 Layer Revision") (rev "3") (company "CSULB SHARKSAT TEAM"))')
     items.append("  (lib_symbols\n" + lib_symbols + "\n  )")
 
     for c in COMPONENTS:
@@ -555,14 +559,15 @@ def write_schematic() -> None:
                 continue
             px = c.x + p.x
             py = c.y - p.y
+            stub_len = 6.35 if c.symbol.startswith("PC104_") else 5.08 if c.symbol.startswith("Conn_") else 2.54
             if p.angle == 0:
-                lx, ly = px - 2.54, py
+                lx, ly = px - stub_len, py
             elif p.angle == 180:
-                lx, ly = px + 2.54, py
+                lx, ly = px + stub_len, py
             elif p.angle == 90:
-                lx, ly = px, py - 2.54
+                lx, ly = px, py - stub_len
             else:
-                lx, ly = px, py + 2.54
+                lx, ly = px, py + stub_len
             items.append(f'  (wire (pts (xy {fmt(px)} {fmt(py)}) (xy {fmt(lx)} {fmt(ly)})) (stroke (width 0) (type default)) (uuid "{u()}"))')
             items.append(f'  (label "{sx(net)}" (at {fmt(lx)} {fmt(ly)} 0) (effects (font (size 0.9 0.9)) (justify left bottom)) (uuid "{u()}"))')
         for p in sym.pins:
@@ -572,21 +577,67 @@ def write_schematic() -> None:
             py = c.y - p.y
             items.append(f'  (no_connect (at {fmt(px)} {fmt(py)}) (uuid "{u()}"))')
 
+    def wire(points: list[tuple[float, float]], width: float = 0.254) -> None:
+        pts = " ".join(f"(xy {fmt(x)} {fmt(y)})" for x, y in points)
+        items.append(f'  (polyline (pts {pts}) (stroke (width {fmt(width)}) (type solid)) (fill (type none)) (uuid "{u()}"))')
+
+    def note(x: float, y: float, text: str, size: float = 1.2, bold: bool = False) -> None:
+        bold_text = " (bold yes)" if bold else ""
+        items.append(
+            f'  (text "{sx(text)}" (exclude_from_sim no) (at {fmt(x)} {fmt(y)} 0) '
+            f'(effects (font (size {fmt(size)} {fmt(size)}){bold_text}) (justify left bottom)) (uuid "{u()}"))'
+        )
+
+    # Visible reviewer wiring for the main power path.  The local labels on each
+    # pin still carry the netlist, while these wires make the rail order obvious.
+    component_by_ref = {c.ref: c for c in COMPONENTS}
+
+    def pin_xy(ref: str, pin_no: str) -> tuple[float, float]:
+        comp = component_by_ref[ref]
+        sym = SYMBOLS[comp.symbol]
+        pin = next(p for p in sym.pins if p.number == str(pin_no))
+        return comp.x + pin.x, comp.y - pin.y
+
+    rail_flows = [
+        ("3.3V", "U1", "6", "U5", "+3V3_PROTECTED"),
+        ("5V", "U2", "17", "U6", "+5V_PROTECTED"),
+        ("12V", "U3", "17", "U7", "+12V_PROTECTED"),
+        ("16.8V", "U4", "17", "U8", "+16V8_PROTECTED"),
+    ]
+    for rail, efuse_ref, efuse_out_pin, ina_ref, prot in rail_flows:
+        row_y = component_by_ref[efuse_ref].y
+        efuse_out = pin_xy(efuse_ref, efuse_out_pin)
+        ina_vin_plus = pin_xy(ina_ref, "7")
+        ina_vin_minus = pin_xy(ina_ref, "8")
+        mid_x = (efuse_out[0] + ina_vin_plus[0]) / 2
+        bus_x = 330
+        wire([(efuse_out[0], efuse_out[1]), (mid_x, efuse_out[1]), (mid_x, ina_vin_plus[1]), (ina_vin_plus[0], ina_vin_plus[1])], 0.35)
+        wire([(ina_vin_minus[0], ina_vin_minus[1]), (bus_x, ina_vin_minus[1]), (bus_x, row_y), (390, row_y)], 0.35)
+        note(86, row_y - 40, f"{rail} rail: RAW/source -> eFuse -> INA260 VIN+ / VIN- -> protected bus", 1.1, True)
+        note(bus_x + 4, row_y - 2.5, f"{prot} branches only after INA260 VIN-", 0.9, False)
+
     notes = [
-        (10, 10, "Power path on every rail: RAW -> eFuse -> INA260 VIN+ -> INA260 VIN- -> PROTECTED output. INA260 VIN- is the downstream positive rail, never GND."),
-        (10, 15, "Serviceable layout choice: eFuse ICs are on the main PCB for manufacturer assembly. If field replacement becomes more important than board area, move each eFuse circuit to a plug-in daughterboard."),
-        (10, 20, "Boost module footprint uses physically verified 60 mm x 42 mm x 20 mm module geometry."),
-        (10, 25, "Only user-selected H1/H2 mission power and GND pins are connected. Excluded/communication pins are not represented in this schematic."),
+        (12, 10, "Power path on every rail: RAW -> eFuse -> INA260 VIN+ -> INA260 VIN- -> PROTECTED output. INA260 VIN- is the downstream positive rail, never GND."),
+        (12, 16, "4-layer PCB intent: L1 components/high-current/local signals, L2 solid GND reference, L3 power zones, L4 secondary routing/GND fill."),
+        (12, 22, "Serviceable layout choice: eFuse ICs are on the main PCB for manufacturer assembly. For true field replacement, move each eFuse circuit to a plug-in daughterboard."),
+        (12, 28, "Only user-selected H1/H2 mission power and GND pins are connected. Excluded communication/normally-closed pins are not represented here."),
+        (24, 56, "ATX input and control terminals"),
+        (58, 226, "Boost module: verified 60 mm x 42 mm x 20 mm footprint, +12V in and +16.8V out"),
+        (112, 44, "Protected rail chains"),
+        (390, 54, "Output connectors: dedicated terminal J4 plus selected EPS H1/H2 power/GND pins only"),
+        (548, 28, "Test points"),
+        (46, 348, "Arduino/control section: USB-powered Nano, open-drain reset MOSFETs, FLT inputs, PS_ON# pulldown"),
+        (175, 350, "Edge-access reset buttons: RESET_3V3, RESET_5V, RESET_12V, RESET_16V8"),
     ]
     for x, y, text in notes:
-        items.append(f'  (text "{sx(text)}" (exclude_from_sim no) (at {fmt(x)} {fmt(y)} 0) (effects (font (size 1.2 1.2) (bold yes)) (justify left bottom)) (uuid "{u()}"))')
+        note(x, y, text, 1.2, True)
 
     SCH.write_text(
         "(kicad_sch\n"
         "  (version 20250114)\n"
         '  (generator "codex-compact-power-board")\n'
         f'  (uuid "{u()}")\n'
-        '  (paper "A3")\n'
+        '  (paper "A2")\n'
         + "\n".join(items)
         + "\n)\n",
         encoding="utf-8",
@@ -629,7 +680,7 @@ def update_project() -> None:
         },
         {
             "bus_width": 12,
-            "clearance": 0.35,
+            "clearance": 0.2,
             "diff_pair_gap": 0.25,
             "diff_pair_via_gap": 0.25,
             "diff_pair_width": 0.2,
@@ -648,7 +699,7 @@ def update_project() -> None:
         },
         {
             "bus_width": 12,
-            "clearance": 0.35,
+            "clearance": 0.2,
             "diff_pair_gap": 0.25,
             "diff_pair_via_gap": 0.25,
             "diff_pair_width": 0.2,
@@ -667,7 +718,7 @@ def update_project() -> None:
         },
         {
             "bus_width": 12,
-            "clearance": 0.4,
+            "clearance": 0.2,
             "diff_pair_gap": 0.25,
             "diff_pair_via_gap": 0.25,
             "diff_pair_width": 0.2,
@@ -686,7 +737,7 @@ def update_project() -> None:
         },
         {
             "bus_width": 12,
-            "clearance": 0.45,
+            "clearance": 0.2,
             "diff_pair_gap": 0.25,
             "diff_pair_via_gap": 0.25,
             "diff_pair_width": 0.2,
@@ -705,7 +756,7 @@ def update_project() -> None:
         },
         {
             "bus_width": 12,
-            "clearance": 0.3,
+            "clearance": 0.2,
             "diff_pair_gap": 0.25,
             "diff_pair_via_gap": 0.25,
             "diff_pair_width": 0.2,
@@ -815,6 +866,7 @@ def write_board() -> None:
     import pcbnew
 
     board = pcbnew.BOARD()
+    board.SetCopperLayerCount(4)
     settings = board.GetDesignSettings()
     settings.m_MinThroughDrill = int(0.2 * 1_000_000)
     settings.m_MinSilkTextHeight = int(0.7 * 1_000_000)
@@ -830,7 +882,7 @@ def write_board() -> None:
 
     placements = {
         "J1": (10, 72, 90), "J2": (16, 160, 0), "J3": (45, 160, 0), "J4": (222, 52, 90),
-        "A1": (36, 24, 90), "U9": (198, 118, 0),
+        "A1": (36, 44, 180), "U9": (198, 118, 0),
         "U1": (82, 40, 0), "U2": (82, 70, 0), "U3": (82, 100, 0), "U4": (82, 130, 0),
         "U5": (112, 40, 0), "U6": (112, 70, 0), "U7": (112, 100, 0), "U8": (112, 130, 0),
         "JH1": (158, 18, 0), "JH2": (176, 18, 0),
@@ -910,8 +962,9 @@ def write_board() -> None:
         t.SetTextThickness(int(0.15 * 1_000_000))
         board.Add(t)
 
-    add_text("EPS POWER TEST - 2 OZ Cu RECOMMENDED", 82, 166, 1.0)
-    add_text("ATX INPUTS", 15, 6, 1.0)
+    add_text("EPS POWER TEST - 4 LAYER, 2 OZ OUTER Cu RECOMMENDED", 70, 166, 1.0)
+    add_text("ATX INPUTS", 6, 7, 1.0)
+    add_text("ARDUINO USB EDGE", 30, 54, 0.8)
     add_text("RESET_3V3 RESET_5V RESET_12V RESET_16V8", 90, 154, 0.85)
     add_text("BOOST 60x42 VERIFIED", 166, 94, 0.9)
     add_text("H1/H2 POWER/GND ONLY", 146, 8, 0.9)

@@ -8,7 +8,7 @@ Compact CubeSat EPS ground power-test board for ATX/boost-supplied rails.
 - Schematic was regenerated first in `Power Testing board.kicad_sch`.
 - Serviceable PCB placement was generated in `Power Testing board.kicad_pcb`.
 - Board outline is 230 mm x 170 mm.
-- PCB is routed with rail-specific copper zones, a solid B.Cu GND plane, and final JLCPCB fabrication outputs in `fabrication/JLCPCB/`.
+- PCB is routed as a 4-layer board with outer-layer routing, rail-specific copper zones, a solid In1.Cu GND reference plane, and final JLCPCB fabrication outputs in `fabrication/JLCPCB/`.
 
 ## Electrical Architecture
 
@@ -49,6 +49,6 @@ Keep those files committed with the KiCad project. Do not rely on absolute local
 ## Before Ordering
 
 - Review the Gerber ZIP and drill files in JLCPCB/JLCDFM before purchase.
-- Use 2 oz copper as documented in `fabrication/JLCPCB/README_ordering.md`.
+- Use the 4-layer stackup and 2 oz outer-copper preference documented in `fabrication/JLCPCB/README_ordering.md`.
 - Verify ATX, EPS/H1/H2, output terminal, boost module, INA260 module, and eFuse footprints against the physical parts.
 - Select/verify the LCSC or customer-supplied plan for all SMD BOM entries before placing the PCBA order.

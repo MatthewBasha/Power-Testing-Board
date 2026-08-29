@@ -121,6 +121,7 @@ def write_notes(clean: bool) -> None:
     status = "ready for JLCPCB fabrication output review" if clean else "draft package only. Do not order yet"
     blockers = (
         "- No KiCad DRC or unconnected-net blockers remain.\n"
+        "- The PCB is configured as a 4-layer board with L2 as the solid GND reference plane and L3 as bulk power distribution.\n"
         "- Final external JLCPCB/JLCDFM preview and LCSC/customer-supplied part selection still need human review before purchase.\n"
         if clean
         else "- Final Gerbers and drill files are not generated because the PCB is not routed or DRC is not clean.\n"
@@ -154,7 +155,7 @@ All SMD parts are on the top side in the current placement. The CPL rotations ar
 ## Important checks
 
 - DRC currently has 0 violations and 0 unconnected items after routing and zone fill.
-- High-current rails have rail-specific copper zones plus existing routed connectivity; short neck-downs remain at fine-pitch eFuse pins and module/header pads.
+- High-current rails have rail-specific copper zones on outer copper and L3/In2.Cu plus existing routed connectivity; short neck-downs remain at fine-pitch eFuse pins and module/header pads.
 - LCSC/JLCPCB part numbers are marked customer-supplied/select-LCSC and must be selected/verified before PCBA order.
 - U1 package/land pattern must be verified against the exact TPS259814L orderable part.
 {blockers}"""
@@ -180,11 +181,13 @@ Status: {readme_status}.
 
 {current_gate}
 
-## Recommended order settings after DRC is clean
+## Recommended 4-layer order settings after DRC is clean
 
-- PCB type: FR-4, 2 layers unless routing requires a 4-layer revision.
+- PCB type: FR-4, 4 layers.
 - Board thickness: 1.6 mm.
-- Copper weight: 2 oz outer copper preferred for high-current margin. Confirm current availability/pricing on the JLCPCB order page.
+- Stackup intent: L1/F.Cu components, high-current routing/pours, local signals; L2/In1.Cu solid uninterrupted GND reference; L3/In2.Cu power-distribution planes/zones; L4/B.Cu signals and secondary GND fill.
+- Copper weight: 2 oz outer copper preferred for high-current margin. Inner copper can remain JLCPCB default 0.5 oz unless price/availability allows 1 oz or 2 oz inner copper for the selected 4-layer stackup.
+- If selecting 2 oz inner copper, verify the current JLCPCB order-page availability and required stackup before purchase; JLCPCB notes inner-layer copper options vary by layer count, thickness, and stackup.
 - Solder mask: green preferred for lowest process risk unless the team wants a different color.
 - Surface finish: ENIG preferred for the fine-pitch QFN/eFuse footprints and flatter pads; lead-free HASL is acceptable only after confirming pad planarity/rework tradeoffs.
 - Assembly side: top side only for the SMD manufacturer-assembled parts.

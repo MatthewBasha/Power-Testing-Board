@@ -10,11 +10,13 @@ Status: ready for fabrication-file review.
 - Use JLCPCB/JLCDFM preview to verify board outline, drills, solder mask, and assembly rotations before purchase.
 
 
-## Recommended order settings after DRC is clean
+## Recommended 4-layer order settings after DRC is clean
 
-- PCB type: FR-4, 2 layers unless routing requires a 4-layer revision.
+- PCB type: FR-4, 4 layers.
 - Board thickness: 1.6 mm.
-- Copper weight: 2 oz outer copper preferred for high-current margin. Confirm current availability/pricing on the JLCPCB order page.
+- Stackup intent: L1/F.Cu components, high-current routing/pours, local signals; L2/In1.Cu solid uninterrupted GND reference; L3/In2.Cu power-distribution planes/zones; L4/B.Cu signals and secondary GND fill.
+- Copper weight: 2 oz outer copper preferred for high-current margin. Inner copper can remain JLCPCB default 0.5 oz unless price/availability allows 1 oz or 2 oz inner copper for the selected 4-layer stackup.
+- If selecting 2 oz inner copper, verify the current JLCPCB order-page availability and required stackup before purchase; JLCPCB notes inner-layer copper options vary by layer count, thickness, and stackup.
 - Solder mask: green preferred for lowest process risk unless the team wants a different color.
 - Surface finish: ENIG preferred for the fine-pitch QFN/eFuse footprints and flatter pads; lead-free HASL is acceptable only after confirming pad planarity/rework tradeoffs.
 - Assembly side: top side only for the SMD manufacturer-assembled parts.
