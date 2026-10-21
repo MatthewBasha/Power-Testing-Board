@@ -1,0 +1,208 @@
+{
+  "server": "kicad",
+  "version": "2.8.2",
+  "installedFrom": "KiCAD-MCP-Server-main.zip supplied by the user",
+  "toolCount": 244,
+  "liveCodexConnection": true,
+  "project": "C:/Users/matth/Documents/GitHub/Power-Testing-Board/Power Testing board.kicad_pro",
+  "checks": [
+    {
+      "tool": "open_project",
+      "arguments": {},
+      "status": "fulfilled",
+      "isError": false,
+      "result": {
+        "success": true,
+        "message": "Opened project: Power Testing board.kicad_pcb",
+        "project": {
+          "name": "Power Testing board",
+          "path": "C:\\Users\\matth\\Documents\\GitHub\\Power-Testing-Board\\Power Testing board.kicad_pro",
+          "boardPath": "C:\\Users\\matth\\Documents\\GitHub\\Power-Testing-Board\\Power Testing board.kicad_pcb"
+        },
+        "_backend": "swig",
+        "_realtime": false,
+        "sessionBackend": "swig"
+      }
+    },
+    {
+      "tool": "get_backend_state",
+      "arguments": {},
+      "status": "fulfilled",
+      "isError": false,
+      "result": {
+        "success": true,
+        "backend": "swig",
+        "realtime": false,
+        "realtime_sync": false,
+        "ipcConnected": false,
+        "ipc_connected": false,
+        "loadedProject": true,
+        "loadedBoard": true,
+        "projectPath": "C:\\Users\\matth\\Documents\\GitHub\\Power-Testing-Board\\Power Testing board.kicad_pro",
+        "boardPath": "C:\\Users\\matth\\Documents\\GitHub\\Power-Testing-Board\\Power Testing board.kicad_pcb",
+        "sessionBackend": "swig",
+        "sessionBoardPath": "c:\\users\\matth\\documents\\github\\power-testing-board\\power testing board.kicad_pcb",
+        "dirty": false,
+        "dirtyReason": "Board file matches the MCP recorded disk signature",
+        "diskChangedExternally": false,
+        "message": "swig backend; board loaded",
+        "_backend": "swig",
+        "_realtime": false
+      }
+    },
+    {
+      "tool": "get_project_info",
+      "arguments": {},
+      "status": "fulfilled",
+      "isError": false,
+      "result": {
+        "success": true,
+        "project": {
+          "name": "Power Testing board",
+          "path": "C:\\Users\\matth\\Documents\\GitHub\\Power-Testing-Board\\Power Testing board.kicad_pcb",
+          "title": "Power Testing board",
+          "date": "2026-10-17",
+          "revision": "",
+          "company": "",
+          "comment1": "",
+          "comment2": "",
+          "comment3": "",
+          "comment4": ""
+        },
+        "_backend": "swig",
+        "_realtime": false
+      }
+    },
+    {
+      "tool": "validate_schematic",
+      "arguments": {
+        "schematicPath": "C:/Users/matth/Documents/GitHub/Power-Testing-Board/Power Testing board.kicad_sch",
+        "runKicadCli": true
+      },
+      "status": "fulfilled",
+      "isError": false,
+      "result": {
+        "success": true,
+        "valid": true,
+        "path": "C:\\Users\\matth\\Documents\\GitHub\\Power-Testing-Board\\Power Testing board.kicad_sch",
+        "message": "Power Testing board.kicad_sch is valid",
+        "errorCount": 0,
+        "warningCount": 0,
+        "issues": [],
+        "kicadCli": {
+          "ran": true,
+          "ok": true,
+          "exitCode": 0,
+          "output": "Schematic file was not updated"
+        },
+        "componentCount": 0,
+        "semanticChecksRan": true,
+        "_backend": "swig",
+        "_realtime": false
+      }
+    },
+    {
+      "tool": "validate_schematic",
+      "arguments": {
+        "schematicPath": "C:/Users/matth/Documents/GitHub/Power-Testing-Board/PTB1Schem1.kicad_sch",
+        "runKicadCli": true
+      },
+      "status": "fulfilled",
+      "isError": false,
+      "result": {
+        "success": true,
+        "valid": true,
+        "path": "C:\\Users\\matth\\Documents\\GitHub\\Power-Testing-Board\\PTB1Schem1.kicad_sch",
+        "message": "PTB1Schem1.kicad_sch is valid",
+        "errorCount": 0,
+        "warningCount": 0,
+        "issues": [],
+        "kicadCli": {
+          "ran": true,
+          "ok": true,
+          "exitCode": 0,
+          "output": "Schematic file was not updated"
+        },
+        "componentCount": 60,
+        "semanticChecksRan": true,
+        "_backend": "swig",
+        "_realtime": false
+      }
+    },
+    {
+      "tool": "validate_schematic",
+      "arguments": {
+        "schematicPath": "C:/Users/matth/Documents/GitHub/Power-Testing-Board/PTB1Schem2.kicad_sch",
+        "runKicadCli": true
+      },
+      "status": "fulfilled",
+      "isError": false,
+      "result": {
+        "success": true,
+        "valid": true,
+        "path": "C:\\Users\\matth\\Documents\\GitHub\\Power-Testing-Board\\PTB1Schem2.kicad_sch",
+        "message": "PTB1Schem2.kicad_sch is valid",
+        "errorCount": 0,
+        "warningCount": 0,
+        "issues": [],
+        "kicadCli": {
+          "ran": true,
+          "ok": true,
+          "exitCode": 0,
+          "output": "Schematic file was not updated"
+        },
+        "componentCount": 42,
+        "semanticChecksRan": true,
+        "_backend": "swig",
+        "_realtime": false
+      }
+    },
+    {
+      "tool": "list_schematic_components",
+      "arguments": {
+        "schematicPath": "C:/Users/matth/Documents/GitHub/Power-Testing-Board/PTB1Schem1.kicad_sch"
+      },
+      "status": "fulfilled",
+      "isError": false,
+      "result": {
+        "text": "Components (60):\n  F2: PTB_Imported:Device_Fuse = \"Fuse\" at (107.95, 87.63) rot=270° [2 pins]\n  #PWR027: PTB_Imported:power_+5V = \"H1-43\" at (81.28, 104.14) rot=270° [1 pins]\n  J3: PTB_Imported:Conn_02x08_Counter_Clockwise_2 = \"INA260\" at (227.33, 115.57) rot=0° [12 pins]\n  #PWR018: PTB_Imported:power_GNDREF = \"GND\" at (227.33, 91.44) rot=90° [1 pins]\n  #PWR015: PTB_Imported:power_+5V = \"+5V\" at (220.98, 15.24) rot=90° [1 pins]\n  SW1: PTB_Imported:Switch_SW_SPST = \"SW_SPST\" at (35.56, 25.4) rot=0° [2 pins]\n  #PWR032: PTB_Imported:power_+5V = \"PDU2_Ch2\" at (226.06, 142.24) rot=270° [1 pins]\n  #PWR08: PTB_Imported:power_GNDREF = \"GND\" at (118.11, 34.29) rot=0° [1 pins]\n  J4: PTB_Imported:Connector_Generic_Conn_02x08_Counter_Clockwise = \"INA260\" at (161.29, 81.28) rot=0° [12 pins]\n  #PWR01: PTB_Imported:power_GNDREF = \"GND\" at (205.74, 29.21) rot=180° [1 pins]\n  A1: PTB_Imported:MCU_Module_Arduino_Nano_v3.x = \"Arduino_Nano_v3.x\" at (54.61, 88.9) rot=0° [30 pins]\n  #PWR09: PTB_Imported:power_GNDREF = \"GND\" at (160.02, 35.56) rot=0° [1 pins]\n  #PWR021: PTB_Imported:power_GNDREF = \"GND\" at (138.43, 138.43) rot=270° [1 pins]\n  #PWR020: PTB_Imported:power_+5V = \"+5V\" at (218.44, 91.44) rot=90° [1 pins]\n  #PWR016: PTB_Imported:power_+5V = \"+5V\" at (203.2, 106.68) rot=0° [1 pins]\n  #PWR05: PTB_Imported:power_GNDREF = \"GND\" at (67.31, 50.8) rot=0° [1 pins]\n  #PWR065: PTB_Imported:power_+5V = \"SCL A1\" at (88.9, 88.9) rot=270° [1 pins]\n  #PWR030: PTB_Imported:power_+5V = \"PDU3_Ch3\" at (160.02, 104.14) rot=270° [1 pins]\n  J5: PTB_Imported:Conn_02x08_Counter_Clockwise_3 = \"INA260\" at (231.14, 38.1) rot=0° [12 pins]\n  #PWR033: PTB_Imported:power_+5V = \"PDU2_Ch1\" at (226.06, 144.78) rot=270° [1 pins]\n  #PWR026: PTB_Imported:power_+5V = \"+5V\" at (87.63, 97.79) rot=270° [1 pins]\n  R1: PTB_Imported:Device_R_US = \"4.7k\" at (82.55, 97.79) rot=90° [2 pins]\n  F3: PTB_Imported:Device_Fuse = \"Fuse\" at (107.95, 121.92) rot=270° [2 pins]\n  J6: PTB_Imported:Conn_02x08_Counter_Clockwise_1 = \"INA260\" at (148.59, 161.29) rot=0° [12 pins]\n  #PWR062: PTB_Imported:power_+5V = \"SDA A0\" at (205.74, 114.3) rot=90° [1 pins]\n  #PWR029: PTB_Imported:power_+5V = \"VBAT_Ch1\" at (233.68, 63.5) rot=270° [1 pins]\n  R2: PTB_Imported:Device_R_US = \"4.7k\" at (82.55, 107.95) rot=90° [2 pins]\n  #PWR066: PTB_Imported:power_+5V = \"SDA A0\" at (88.9, 86.36) rot=270° [1 pins]\n  #PWR012: PTB_Imported:power_GNDREF = \"GND\" at (149.86, 58.42) rot=270° [1 pins]\n  #PWR022: PTB_Imported:power_+5V = \"PDU2_Ch3\" at (226.06, 139.7) rot=270° [1 pins]\n  F1: PTB_Imported:Device_Fuse = \"Fuse\" at (200.66, 44.45) rot=270° [2 pins]\n  #PWR03: PTB_Imported:power_+5V = \"+5V\" at (210.82, 29.21) rot=0° [1 pins]\n  #PWR037: PTB_Imported:power_+5V = \"PDU1_Ch1\" at (142.24, 186.69) rot=270° [1 pins]\n  #PWR023: PTB_Imported:power_+5V = \"VBAT_Ch2\" at (233.68, 60.96) rot=270° [1 pins]\n  #PWR028: PTB_Imported:power_+5V = \"+5V\" at (87.63, 107.95) rot=270° [1 pins]\n  #PWR014: PTB_Imported:power_+5V = \"+5V\" at (125.73, 152.4) rot=0° [1 pins]\n  #PWR060: PTB_Imported:power_+5V = \"SDA A0\" at (209.55, 36.83) rot=90° [1 pins]\n  F4: PTB_Imported:Device_Fuse = \"Fuse\" at (109.22, 167.64) rot=270° [2 pins]\n  #PWR019: PTB_Imported:power_+5V = \"VBAT_Ch3\" at (233.68, 58.42) rot=270° [1 pins]\n  #PWR057: PTB_Imported:power_+5V = \"SCL A1\" at (135.89, 77.47) rot=90° [1 pins]\n  #PWR031: PTB_Imported:power_+5V = \"PDU3_Ch2\" at (160.02, 106.68) rot=270° [1 pins]\n  #PWR013: PTB_Imported:power_GNDREF = \"GND\" at (121.92, 152.4) rot=180° [1 pins]\n  #PWR04: PTB_Imported:power_GNDREF = \"GND\" at (132.08, 72.39) rot=180° [1 pins]\n  #PWR07: PTB_Imported:power_GNDREF = \"GND\" at (26.67, 26.67) rot=0° [1 pins]\n  #PWR061: PTB_Imported:power_+5V = \"SCL A1\" at (205.74, 111.76) rot=90° [1 pins]\n  #PWR02: PTB_Imported:power_+5V = \"+5V\" at (82.55, 72.39) rot=180° [1 pins]\n  #PWR06: PTB_Imported:power_GNDREF = \"GND\" at (54.61, 118.11) rot=0° [1 pins]\n  #PWR024: PTB_Imported:power_+5V = \"PDU1_Ch3\" at (142.24, 181.61) rot=270° [1 pins]\n  #PWR036: PTB_Imported:power_+5V = \"PDU1_Ch2\" at (142.24, 184.15) rot=270° [1 pins]\n  #PWR017: PTB_Imported:power_+5V = \"+5V\" at (160.02, 58.42) rot=270° [1 pins]\n  J1: PTB_Imported:Connector_ATX-24 = \"ATX-24\" at (67.31, 35.56) rot=0° [24 pins]\n  #PWR025: PTB_Imported:power_+5V = \"H1-41\" at (81.28, 101.6) rot=270° [1 pins]\n  #PWR063: PTB_Imported:power_+5V = \"SCL A1\" at (128.27, 157.48) rot=90° [1 pins]\n  J2: PTB_Imported:Connector_Generic_Conn_02x03_Odd_Even = \"Buck/Boost\" at (138.43, 30.48) rot=0° [7 pins]\n  #PWR059: PTB_Imported:power_+5V = \"SCL A1\" at (209.55, 34.29) rot=90° [1 pins]\n  #PWR064: PTB_Imported:power_+5V = \"SDA A0\" at (128.27, 160.02) rot=90° [1 pins]\n  #PWR011: PTB_Imported:power_GNDREF = \"GND\" at (198.12, 106.68) rot=180° [1 pins]\n  #PWR058: PTB_Imported:power_+5V = \"SDA A0\" at (135.89, 80.01) rot=90° [1 pins]\n  #PWR035: PTB_Imported:power_+5V = \"PDU3_Ch1\" at (160.02, 109.22) rot=270° [1 pins]\n  #PWR010: PTB_Imported:power_+5V = \"+5V\" at (137.16, 72.39) rot=0° [1 pins]"
+      }
+    },
+    {
+      "tool": "list_schematic_components",
+      "arguments": {
+        "schematicPath": "C:/Users/matth/Documents/GitHub/Power-Testing-Board/PTB1Schem2.kicad_sch"
+      },
+      "status": "fulfilled",
+      "isError": false,
+      "result": {
+        "text": "Components (42):\n  #PWR092: PTB_Imported:power_GNDREF = \"GND\" at (114.3, 101.6) rot=270° [1 pins]\n  #PWR0109: PTB_Imported:power_+5V = \"PDU1_Ch3\" at (81.28, 111.76) rot=270° [1 pins]\n  #PWR034: PTB_Imported:power_+5V = \"VBAT_Ch1\" at (110.49, 106.68) rot=90° [1 pins]\n  #PWR079: PTB_Imported:power_GNDREF = \"GND\" at (77.47, 76.2) rot=90° [1 pins]\n  H1: PTB_Imported:Connector_Generic_Conn_02x26_Odd_Even = \"Conn_02x26_Odd_Even\" at (67.31, 81.28) rot=0° [52 pins]\n  #PWR094: PTB_Imported:power_GNDREF = \"GND\" at (132.08, 86.36) rot=90° [1 pins]\n  #PWR088: PTB_Imported:power_GNDREF = \"GND\" at (59.69, 88.9) rot=270° [1 pins]\n  #PWR091: PTB_Imported:power_GNDREF = \"GND\" at (114.3, 99.06) rot=270° [1 pins]\n  #PWR041: PTB_Imported:power_+5V = \"H1-41\" at (55.88, 101.6) rot=90° [1 pins]\n  #PWR096: PTB_Imported:power_GNDREF = \"GND\" at (132.08, 93.98) rot=90° [1 pins]\n  #PWR086: PTB_Imported:power_GNDREF = \"GND\" at (59.69, 99.06) rot=270° [1 pins]\n  #PWR042: PTB_Imported:power_+5V = \"PDU2_Ch1\" at (110.49, 81.28) rot=90° [1 pins]\n  #PWR043: PTB_Imported:power_+5V = \"PDU1_Ch1\" at (135.89, 83.82) rot=270° [1 pins]\n  #PWR093: PTB_Imported:power_GNDREF = \"GND\" at (114.3, 104.14) rot=270° [1 pins]\n  #PWR089: PTB_Imported:power_GNDREF = \"GND\" at (114.3, 86.36) rot=270° [1 pins]\n  #PWR0101: PTB_Imported:power_+5V = \"PDU2_Ch2\" at (55.88, 111.76) rot=90° [1 pins]\n  #PWR044: PTB_Imported:power_+5V = \"PDU2_Ch1\" at (135.89, 81.28) rot=270° [1 pins]\n  #PWR097: PTB_Imported:power_GNDREF = \"GND\" at (132.08, 99.06) rot=90° [1 pins]\n  #PWR0100: PTB_Imported:power_+5V = \"PDU2_Ch3\" at (55.88, 114.3) rot=90° [1 pins]\n  #PWR084: PTB_Imported:power_GNDREF = \"GND\" at (77.47, 99.06) rot=90° [1 pins]\n  #PWR0110: PTB_Imported:power_+5V = \"PDU1_Ch2\" at (81.28, 109.22) rot=270° [1 pins]\n  #PWR098: PTB_Imported:power_GNDREF = \"GND\" at (132.056, 101.6) rot=90° [1 pins]\n  #PWR045: PTB_Imported:power_+5V = \"VBAT_Ch1\" at (135.89, 106.68) rot=270° [1 pins]\n  #PWR039: PTB_Imported:power_+5V = \"PDU3_Ch1\" at (81.28, 114.3) rot=270° [1 pins]\n  #PWR099: PTB_Imported:power_GNDREF = \"GND\" at (132.08, 104.14) rot=90° [1 pins]\n  #PWR081: PTB_Imported:power_GNDREF = \"GND\" at (77.47, 83.82) rot=90° [1 pins]\n  #PWR080: PTB_Imported:power_GNDREF = \"GND\" at (77.47, 78.74) rot=90° [1 pins]\n  #PWR0102: PTB_Imported:power_+5V = \"PDU2_Ch1\" at (55.88, 109.22) rot=90° [1 pins]\n  #PWR095: PTB_Imported:power_GNDREF = \"GND\" at (132.08, 88.9) rot=90° [1 pins]\n  #PWR0108: PTB_Imported:power_+5V = \"PDU3_Ch1\" at (196.85, 76.2) rot=270° [1 pins]\n  #PWR083: PTB_Imported:power_GNDREF = \"GND\" at (77.47, 93.98) rot=90° [1 pins]\n  #PWR0106: PTB_Imported:power_+5V = \"PDU3_Ch3\" at (196.85, 71.12) rot=270° [1 pins]\n  #PWR0105: PTB_Imported:power_+5V = \"VBAT_Ch1\" at (196.85, 62.23) rot=270° [1 pins]\n  #PWR090: PTB_Imported:power_GNDREF = \"GND\" at (114.3, 88.9) rot=270° [1 pins]\n  #PWR040: PTB_Imported:power_+5V = \"H1-43\" at (55.88, 104.14) rot=90° [1 pins]\n  #PWR0111: PTB_Imported:power_+5V = \"PDU1_Ch1\" at (200.66, 111.76) rot=270° [1 pins]\n  #PWR038: PTB_Imported:power_+5V = \"PDU1_Ch1\" at (110.49, 83.82) rot=90° [1 pins]\n  H2: PTB_Imported:Connector_Generic_Conn_02x26_Odd_Even = \"Conn_02x26_Odd_Even\" at (121.92, 81.28) rot=0° [52 pins]\n  #PWR087: PTB_Imported:power_GNDREF = \"GND\" at (59.69, 83.82) rot=270° [1 pins]\n  #PWR085: PTB_Imported:power_GNDREF = \"GND\" at (77.47, 101.6) rot=90° [1 pins]\n  #PWR082: PTB_Imported:power_GNDREF = \"GND\" at (77.47, 88.9) rot=90° [1 pins]\n  #PWR0107: PTB_Imported:power_+5V = \"PDU3_Ch2\" at (196.85, 73.66) rot=270° [1 pins]"
+      }
+    },
+    {
+      "tool": "validate_symbol_library",
+      "arguments": {},
+      "status": "fulfilled",
+      "isError": false,
+      "result": {
+        "success": true,
+        "valid": true,
+        "path": "C:\\Users\\matth\\Documents\\GitHub\\Power-Testing-Board\\PTB_Imported.kicad_sym",
+        "message": "PTB_Imported.kicad_sym is valid",
+        "errorCount": 0,
+        "warningCount": 0,
+        "issues": [],
+        "kicadCli": {
+          "ran": true,
+          "ok": true,
+          "exitCode": 0,
+          "output": "Saving symbol library in updated format"
+        },
+        "symbolCount": 13,
+        "semanticChecksRan": true,
+        "_backend": "swig",
+        "_realtime": false
+      }
+    }
+  ]
+}

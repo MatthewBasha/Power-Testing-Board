@@ -1,0 +1,1761 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-17T14:54:29",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/6b52c4e2-34d1-43e7-a931-cdd1e96e19f8",
+            "violations": [
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.8382
+                            },
+                            "uuid": "3f2c10e9-85f8-431b-9065-0bb58878f73c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.889
+                            },
+                            "uuid": "4c1778a2-0a24-47fe-a510-5e0fd0f43d7b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.9906
+                            },
+                            "uuid": "a68aeaee-ba71-4c97-81e1-bbb6497eb241"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 1.016
+                            },
+                            "uuid": "a0241c2d-7853-440f-a69c-63a269f86885"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 0.635,
+                                "y": 1.0414
+                            },
+                            "uuid": "0f3da7cc-d0bf-4460-af28-cc6989956a8b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.762
+                            },
+                            "uuid": "57483bc9-d493-45df-9e97-0246234a8f19"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.7874
+                            },
+                            "uuid": "5207c47f-2905-4e75-96d3-f7cc5813729a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.8382
+                            },
+                            "uuid": "1dc7008e-22aa-4cda-8010-97154bd36115"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.889
+                            },
+                            "uuid": "03eb3234-73e4-473d-801c-ffece826c4d3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.9398
+                            },
+                            "uuid": "4baaa130-7836-4d68-a8d8-399637ab37be"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.9906
+                            },
+                            "uuid": "72ad607c-3e1b-4a31-915e-bdd33a150ba2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 1.016
+                            },
+                            "uuid": "c4a627b2-3648-4e89-b817-bb538e667974"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.8636
+                            },
+                            "uuid": "24b843b1-25c7-4d97-a1ad-e0074c459e33"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.889
+                            },
+                            "uuid": "8a52e801-08d9-4504-aebc-2f218a1bf10a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.9906
+                            },
+                            "uuid": "87eb6d6b-6a0a-4ddc-b276-c9e6fbce2a82"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 1.016
+                            },
+                            "uuid": "d1447947-0bb7-47ab-aa18-9f8c0b850c88"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 1.0414
+                            },
+                            "uuid": "30654da3-46bb-4e6b-9b46-00215247c043"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.8636
+                            },
+                            "uuid": "4f5ff657-959d-400b-b4eb-86ef285d2bfd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0002 mm",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 1.016
+                            },
+                            "uuid": "9a7b997e-e085-4507-b10b-1823d251e861"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0002 mm",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 1.016
+                            },
+                            "uuid": "9a7b997e-e085-4507-b10b-1823d251e861"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR098 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 1.32056,
+                                "y": 1.016
+                            },
+                            "uuid": "27b8891d-5620-4c30-ba2e-98e82be3ad92"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0252 mm",
+                            "pos": {
+                                "x": 1.32056,
+                                "y": 1.016
+                            },
+                            "uuid": "e29a1bae-2aee-4481-957a-7cfd08c8c702"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0635 mm",
+                            "pos": {
+                                "x": 1.905,
+                                "y": 0.6223
+                            },
+                            "uuid": "9889831c-73e3-4fa9-beee-1faacc37d0b1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0635 mm",
+                            "pos": {
+                                "x": 1.905,
+                                "y": 0.7112
+                            },
+                            "uuid": "e863e2f8-ebed-47bf-931c-98d6f17ecac9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0635 mm",
+                            "pos": {
+                                "x": 1.905,
+                                "y": 0.7366
+                            },
+                            "uuid": "88f5a46c-40e2-4409-b909-cdf09fcbbe4b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0635 mm",
+                            "pos": {
+                                "x": 1.905,
+                                "y": 0.762
+                            },
+                            "uuid": "6f0bf041-a74f-4c56-933e-65fafb7a5b74"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0635 mm",
+                            "pos": {
+                                "x": 1.9431,
+                                "y": 1.1176
+                            },
+                            "uuid": "651961cc-05b5-4fbc-89a4-fc906af5b2c5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                }
+            ]
+        },
+        {
+            "path": "/PTB1 Schematic 1/",
+            "uuid_path": "/6b52c4e2-34d1-43e7-a931-cdd1e96e19f8/dde3332a-5378-43f7-afc1-49d78a8a4db0",
+            "violations": [
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol A1 Pin 29 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 0.5715,
+                                "y": 1.143
+                            },
+                            "uuid": "7f085397-02e8-4df0-bfcd-a094f3384127"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol A1 Pin 29 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 0.5715,
+                                "y": 1.143
+                            },
+                            "uuid": "7f085397-02e8-4df0-bfcd-a094f3384127"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR025 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 0.8128,
+                                "y": 1.016
+                            },
+                            "uuid": "e23e317f-e86e-4339-b801-2004464377ed"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR027 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 0.8128,
+                                "y": 1.0414
+                            },
+                            "uuid": "cf0b99f1-415b-4f64-b73d-e0b0fbbae667"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR057 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 1.3589,
+                                "y": 0.7747
+                            },
+                            "uuid": "3fe0b4c7-eda4-4be8-ab79-97052822088d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR058 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 1.3589,
+                                "y": 0.8001
+                            },
+                            "uuid": "63603230-7b31-43c6-8171-53553d985506"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR024 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 1.4224,
+                                "y": 1.8161
+                            },
+                            "uuid": "d5146d3b-ad58-4d98-94de-672c3b202044"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR030 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 1.6002,
+                                "y": 1.0414
+                            },
+                            "uuid": "c946f344-de13-46b0-8c31-489e688c2fbd"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR022 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 2.2606,
+                                "y": 1.397
+                            },
+                            "uuid": "37bc4054-c238-486d-86b9-acebb9593946"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR019 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 2.3368,
+                                "y": 0.5842
+                            },
+                            "uuid": "e7e52c78-cdce-47c9-b1f7-5c0bd9913f52"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Both PDU1_Ch1 and PDU1_Ch3 are attached to the same items; PDU1_Ch1 will be used in the netlist",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR037 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 1.4224,
+                                "y": 1.8669
+                            },
+                            "uuid": "44a3283e-fda2-471e-b9c0-a2b1e07372aa"
+                        },
+                        {
+                            "description": "Symbol #PWR024 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 1.4224,
+                                "y": 1.8161
+                            },
+                            "uuid": "d5146d3b-ad58-4d98-94de-672c3b202044"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "multiple_net_names"
+                },
+                {
+                    "description": "Both PDU3_Ch1 and PDU3_Ch3 are attached to the same items; PDU3_Ch1 will be used in the netlist",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR035 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 1.6002,
+                                "y": 1.0922
+                            },
+                            "uuid": "db1b29ec-dab2-4652-be60-39bf7670989b"
+                        },
+                        {
+                            "description": "Symbol #PWR030 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 1.6002,
+                                "y": 1.0414
+                            },
+                            "uuid": "c946f344-de13-46b0-8c31-489e688c2fbd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "multiple_net_names"
+                },
+                {
+                    "description": "Both PDU2_Ch1 and PDU2_Ch2 are attached to the same items; PDU2_Ch1 will be used in the netlist",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR033 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 2.2606,
+                                "y": 1.4478
+                            },
+                            "uuid": "ad5482be-3965-42ce-88b0-9d6a818eab41"
+                        },
+                        {
+                            "description": "Symbol #PWR032 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 2.2606,
+                                "y": 1.4224
+                            },
+                            "uuid": "6a5a9c79-ffd7-4be1-a2e8-7e754ae0ca8f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "multiple_net_names"
+                },
+                {
+                    "description": "Both VBAT_Ch1 and VBAT_Ch2 are attached to the same items; VBAT_Ch1 will be used in the netlist",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR029 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 2.3368,
+                                "y": 0.635
+                            },
+                            "uuid": "e2ce9f1e-68b9-447e-89ab-a0867ba5f4af"
+                        },
+                        {
+                            "description": "Symbol #PWR023 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 2.3368,
+                                "y": 0.6096
+                            },
+                            "uuid": "23be6034-9f53-4f7e-9a12-c98179441e4f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "multiple_net_names"
+                }
+            ]
+        },
+        {
+            "path": "/PTB1 Schematic 2/",
+            "uuid_path": "/6b52c4e2-34d1-43e7-a931-cdd1e96e19f8/1392f763-3201-45cf-b0a6-d903ad89db4a",
+            "violations": [
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 1 [Pin_1, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.508
+                            },
+                            "uuid": "a9f2d51a-5fc3-4804-9d19-50f46f1f2c82"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 3 [Pin_3, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.5334
+                            },
+                            "uuid": "c435b055-84bb-4ef1-9177-efe2ad322da2"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 5 [Pin_5, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.5588
+                            },
+                            "uuid": "be6659e5-8f64-4521-a2fb-931a1700106c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 7 [Pin_7, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.5842
+                            },
+                            "uuid": "f6c86f29-882d-4892-9557-a17e1737f001"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 9 [Pin_9, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.6096
+                            },
+                            "uuid": "260412d3-5450-489b-921a-912c5d3d77bc"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 11 [Pin_11, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.635
+                            },
+                            "uuid": "93529c56-8428-4bb1-a186-10dd6528d967"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 13 [Pin_13, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.6604
+                            },
+                            "uuid": "a4080ec9-27bd-4109-8c6a-e42d785ef38d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 15 [Pin_15, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.6858
+                            },
+                            "uuid": "c22a94da-2099-4e48-9500-c97c0760040d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 17 [Pin_17, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.7112
+                            },
+                            "uuid": "92e6bb70-6fdb-4f1f-8685-17350cb21b20"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 19 [Pin_19, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.7366
+                            },
+                            "uuid": "629b98f0-f2ab-4a0b-8d55-75e25ff2aa0a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 21 [Pin_21, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.762
+                            },
+                            "uuid": "3f574362-da80-466b-b040-7becb47ca78e"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 23 [Pin_23, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.7874
+                            },
+                            "uuid": "f7f2e761-21db-4044-a279-db5f7f264b57"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 25 [Pin_25, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.8128
+                            },
+                            "uuid": "67f59791-dabe-48e0-83aa-aa21c2c90791"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 29 [Pin_29, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.8636
+                            },
+                            "uuid": "aaff7c24-9f8e-4cdd-826b-d768b2eb7134"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 33 [Pin_33, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.9144
+                            },
+                            "uuid": "1de5d62b-419d-45b2-87fd-eb275fd8019b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 35 [Pin_35, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.9398
+                            },
+                            "uuid": "51d1b258-b166-4b42-a997-102ba5c4c340"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 37 [Pin_37, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 0.9652
+                            },
+                            "uuid": "2967dd11-931b-4aac-b45f-e7e0bf2548c1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 45 [Pin_45, Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 1.0668
+                            },
+                            "uuid": "0d8aaf04-3677-460d-b334-d577f535a20c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 2 [Pin_2, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.508
+                            },
+                            "uuid": "1728dbe3-ab93-41da-bffd-3b0a32662463"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 4 [Pin_4, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.5334
+                            },
+                            "uuid": "43266fb2-20f7-4a93-90bb-71894a09d88c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 6 [Pin_6, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.5588
+                            },
+                            "uuid": "90fd6ca2-dc75-4c34-a40f-68c1aa7e6db9"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 8 [Pin_8, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.5842
+                            },
+                            "uuid": "7d6e97f2-60cf-470c-9722-10a36405c83e"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 10 [Pin_10, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.6096
+                            },
+                            "uuid": "8852ef2e-4161-43f1-8abc-b90b9452a780"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 12 [Pin_12, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.635
+                            },
+                            "uuid": "df5c421f-a4bf-4dad-bd1d-11de99fff925"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 14 [Pin_14, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.6604
+                            },
+                            "uuid": "c3adfd4e-0e84-4ffe-a841-903ffb0d16b0"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 16 [Pin_16, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.6858
+                            },
+                            "uuid": "7cdf1059-0cbd-4506-bca1-ec77847127a3"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 18 [Pin_18, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.7112
+                            },
+                            "uuid": "716dd848-ae77-4361-b766-bc9fe515b96b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 20 [Pin_20, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.7366
+                            },
+                            "uuid": "fb7fcc8c-9e39-47c7-aca2-93e59b06a4e4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 26 [Pin_26, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.8128
+                            },
+                            "uuid": "6b8a102d-9ba9-4067-9d6f-db212a612fd9"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 30 [Pin_30, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.8636
+                            },
+                            "uuid": "40673e67-6a60-44f1-a927-5487e7eb7d50"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 34 [Pin_34, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.9144
+                            },
+                            "uuid": "9d923438-0821-45b2-a2eb-29c89903fcf2"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 38 [Pin_38, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 0.9652
+                            },
+                            "uuid": "ae340774-c381-4bee-8a23-3966488b8e55"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 44 [Pin_44, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 1.0414
+                            },
+                            "uuid": "391ecea6-d904-4fc2-9515-3886fb33cf24"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H1 Pin 46 [Pin_46, Passive, Line]",
+                            "pos": {
+                                "x": 0.7493,
+                                "y": 1.0668
+                            },
+                            "uuid": "0457beb5-28cf-4642-9684-47eadfccf19c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 1 [Pin_1, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.508
+                            },
+                            "uuid": "cc4cb8b1-74b3-4925-84cf-14206139aac1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 3 [Pin_3, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.5334
+                            },
+                            "uuid": "48170546-7f73-4e78-b491-d83a836b3786"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 5 [Pin_5, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.5588
+                            },
+                            "uuid": "db5ca832-c638-4481-aaf2-780a4a47e54a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 7 [Pin_7, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.5842
+                            },
+                            "uuid": "8e3c8cf1-6f81-4466-bdf7-e70361104400"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 9 [Pin_9, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.6096
+                            },
+                            "uuid": "05b3a616-e38c-42e1-a4bc-bd24b9bd899a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 11 [Pin_11, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.635
+                            },
+                            "uuid": "3aca08ce-bc29-4e66-984c-31f00e36206b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 13 [Pin_13, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.6604
+                            },
+                            "uuid": "983af373-eb17-40b4-83ce-85d5a821ca74"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 15 [Pin_15, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.6858
+                            },
+                            "uuid": "b55053e6-ac33-4234-84e3-09aed1e5c3e0"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 17 [Pin_17, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.7112
+                            },
+                            "uuid": "8328bd16-3ef0-40d5-8f04-271a0dacb7dc"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 19 [Pin_19, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.7366
+                            },
+                            "uuid": "67ef98da-6657-44d9-ac29-4b5d317e0f09"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 21 [Pin_21, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.762
+                            },
+                            "uuid": "5bc97d83-4318-4e6a-bd0c-d3d9e5634c9e"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 23 [Pin_23, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.7874
+                            },
+                            "uuid": "7fffba4b-9dda-4fcd-b44e-9e435743c44a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 33 [Pin_33, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.9144
+                            },
+                            "uuid": "4e648734-dcd2-47cd-97ec-2151568e9c29"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 35 [Pin_35, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.9398
+                            },
+                            "uuid": "b7dd3753-2591-4985-adff-b1639da498e5"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 37 [Pin_37, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 0.9652
+                            },
+                            "uuid": "e9961a22-5460-4f1d-8b31-f9abe6e5c735"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 47 [Pin_47, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 1.0922
+                            },
+                            "uuid": "14c7b1ec-fca8-45d8-ae66-fb541a2672c4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 49 [Pin_49, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 1.1176
+                            },
+                            "uuid": "03df1e0c-0cfe-493d-8e80-04e52afcdf32"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 51 [Pin_51, Passive, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 1.143
+                            },
+                            "uuid": "dc5a617e-ba83-49cf-acea-7333f50fff6c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 2 [Pin_2, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.508
+                            },
+                            "uuid": "28be88b7-4171-4c9b-b73f-d4edec6036e6"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 4 [Pin_4, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.5334
+                            },
+                            "uuid": "9552d018-56f4-4c43-a277-a05e1405b15a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 6 [Pin_6, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.5588
+                            },
+                            "uuid": "541f8230-d1f0-47b5-b606-15fa996a15fb"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 8 [Pin_8, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.5842
+                            },
+                            "uuid": "ca7d1cff-d193-42c7-acf8-496f319bef08"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 10 [Pin_10, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.6096
+                            },
+                            "uuid": "cba3b16b-576f-41cc-8377-5d59dfeed2e6"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 12 [Pin_12, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.635
+                            },
+                            "uuid": "b33f79e4-d03e-4e71-af1c-3431b692fcfd"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 14 [Pin_14, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.6604
+                            },
+                            "uuid": "39b496a9-c662-4449-a3c3-4017a6586a35"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 16 [Pin_16, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.6858
+                            },
+                            "uuid": "dd72f25c-4fa3-4d53-a29a-3dad4ba63924"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 18 [Pin_18, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.7112
+                            },
+                            "uuid": "a5d5938b-9eac-46a9-aecf-982de2bb5d1f"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 20 [Pin_20, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.7366
+                            },
+                            "uuid": "c2066b3a-0d79-47bb-a29c-fb4dbb8d0cb0"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 22 [Pin_22, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.762
+                            },
+                            "uuid": "825fc149-c73f-4e5c-9ccb-7f9b744bba0e"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 24 [Pin_24, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.7874
+                            },
+                            "uuid": "7597a244-b3f7-404b-912e-7270812c616c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 34 [Pin_34, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.9144
+                            },
+                            "uuid": "19c9984b-f3de-4267-90b3-7fa4eedd9137"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 38 [Pin_38, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 0.9652
+                            },
+                            "uuid": "821eb0d6-6e3c-4d2a-bb05-ba4833acfa14"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 48 [Pin_48, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 1.0922
+                            },
+                            "uuid": "9104ce68-e35e-4999-beba-a93d6bf7a1a6"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 50 [Pin_50, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 1.1176
+                            },
+                            "uuid": "14c67769-922f-42b3-a371-031b9c056aa0"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol H2 Pin 52 [Pin_52, Passive, Line]",
+                            "pos": {
+                                "x": 1.2954,
+                                "y": 1.143
+                            },
+                            "uuid": "5a74e8b2-99f7-466f-a078-e03c970c9ca8"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR0106 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 1.9685,
+                                "y": 0.7112
+                            },
+                            "uuid": "03180edd-4ec6-4643-b508-2dfedcf493e2"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR0107 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 1.9685,
+                                "y": 0.7366
+                            },
+                            "uuid": "398d8761-a6ff-4dab-bdec-92149278cf1c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                }
+            ]
+        }
+    ],
+    "source": "Power Testing board.kicad_sch"
+}

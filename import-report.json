@@ -1,0 +1,77 @@
+{
+  "project": "Power Testing board",
+  "root_uuid": "6b52c4e2-34d1-43e7-a931-cdd1e96e19f8",
+  "sheets": [
+    {
+      "file": "PTB1Schem1.kicad_sch",
+      "symbols": 60,
+      "physical_components": 14,
+      "sheet_block_uuid": "dde3332a-5378-43f7-afc1-49d78a8a4db0"
+    },
+    {
+      "file": "PTB1Schem2.kicad_sch",
+      "symbols": 42,
+      "physical_components": 2,
+      "sheet_block_uuid": "1392f763-3201-45cf-b0a6-d903ad89db4a"
+    }
+  ],
+  "reference_changes": [
+    {
+      "sheet": "PTB1Schem1.kicad_sch",
+      "uuid": "11d33760-3ffb-4de6-8c87-52d57286cce1",
+      "old": "SW?",
+      "new": "SW1"
+    },
+    {
+      "sheet": "PTB1Schem1.kicad_sch",
+      "uuid": "1c13fb87-23bd-4e78-a5e3-c3099861ed51",
+      "old": "J3",
+      "new": "J4"
+    },
+    {
+      "sheet": "PTB1Schem1.kicad_sch",
+      "uuid": "2e0d38e5-73d3-4996-825d-6f9175ddd0f2",
+      "old": "J3",
+      "new": "J5"
+    },
+    {
+      "sheet": "PTB1Schem1.kicad_sch",
+      "uuid": "3a5e29c7-f5ad-4106-abf6-9c1aef251469",
+      "old": "J3",
+      "new": "J6"
+    },
+    {
+      "sheet": "PTB1Schem2.kicad_sch",
+      "uuid": "20d5863e-d3d6-4e1d-8cc0-a3ff188f3a0a",
+      "old": "#PWR030",
+      "new": "#PWR034"
+    },
+    {
+      "sheet": "PTB1Schem2.kicad_sch",
+      "uuid": "4f4511da-d4c8-428e-8654-5169b8b9aefe",
+      "old": "#PWR035",
+      "new": "#PWR042"
+    },
+    {
+      "sheet": "PTB1Schem2.kicad_sch",
+      "uuid": "5aa11af9-d0a9-404d-ab7a-9ee9d13d0013",
+      "old": "#PWR037",
+      "new": "#PWR043"
+    },
+    {
+      "sheet": "PTB1Schem2.kicad_sch",
+      "uuid": "73dd4092-e18b-4c3c-83e4-ff3f579799a1",
+      "old": "#PWR036",
+      "new": "#PWR044"
+    },
+    {
+      "sheet": "PTB1Schem2.kicad_sch",
+      "uuid": "a62a9f48-65ae-4986-90fa-0c3ec2bfc19c",
+      "old": "#PWR029",
+      "new": "#PWR045"
+    }
+  ],
+  "portable_library_symbols": 13,
+  "backup": "C:\\Users\\matth\\Documents\\Codex\\2026-10-17\\files-mentioned-by-the-user-kicad\\outputs\\Power-Testing-Board-before-import-2026-10-17.zip",
+  "wiring_and_symbol_geometry_preserved": true
+}
